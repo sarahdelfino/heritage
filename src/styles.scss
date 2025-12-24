@@ -1,1 +1,105 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+
+
+
+@use '@angular/material'as mat;
+
+html {
+  @include mat.theme((
+      typography: Roboto,
+      density: 0,
+    ));
+}
+
+body {
+  
+  
+  
+  color-scheme: light;
+
+  
+  
+  
+  
+  
+  
+
+  
+  margin: 0;
+}
+
+:root {
+  --brand-maroon: #500909;
+  --brand-gold: #c9a14a;
+  --brand-white: #ffffff;
+
+  /* Primary / accent */
+  --mat-sys-primary: var(--brand-maroon);
+  --mat-sys-on-primary: var(--brand-white);
+
+  --mat-sys-secondary: var(--brand-gold);
+  --mat-sys-on-secondary: #000;
+
+  --mat-sys-tertiary: var(--brand-gold);
+  --mat-sys-on-tertiary: #000;
+
+  /* Kill default surfaces/greys */
+  --mat-sys-background: var(--brand-white);
+  --mat-sys-surface: var(--brand-white);
+  --mat-sys-surface-container: var(--brand-white);
+  --mat-sys-surface-container-highest: var(--brand-white);
+
+  /* Borders / outlines (use your gold or maroon) */
+  --mat-sys-outline: rgba(80, 9, 9, 0.35);
+  --mat-sys-outline-variant: rgba(80, 9, 9, 0.20);
+
+  /* Text */
+  --mat-sys-on-surface: #111;
+  --mat-sys-on-surface-variant: rgba(17, 17, 17, 0.75);
+
+  /* Error — if you truly don’t want “red”, reuse maroon */
+  --mat-sys-error: var(--brand-maroon);
+  --mat-sys-on-error: var(--brand-white);
+}
+
+
+body {
+  background-color: #e4e4e4;
+}
+
+button {
+  padding: 12px 24px;
+  color: white;
+  font-size: 1.25em;
+  border: none;
+  border-radius: 4px;
+  background-color: #500909;
+  cursor: pointer;
+}
+
+.primary {
+  background-color: #500909;
+  border: 1px solid white;
+}
+
+.secondary {
+    background-color: #c9a14a;
+  border: 1px solid #c9a14a;
+}
+
+.outline {
+  border: 1px solid #500909;
+  background-color: transparent;
+  color: #500909;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

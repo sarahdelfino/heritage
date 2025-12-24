@@ -1,0 +1,165 @@
+{
+    "roofPitch": [
+        {
+            "value": ".25:12"
+        },
+        {
+            "value": ".50:12"
+        },
+        {
+            "value": "1:12"
+        },
+        {
+            "value": "2:12"
+        },
+        {
+            "value": "3:12"
+        },
+        {
+            "value": "4:12"
+        },
+        {
+            "value": "5:12"
+        },
+        {
+            "value": "6:12"
+        },
+        {
+            "value": "Other"
+        },
+        {
+            "value": "I don't know"
+        }
+    ],
+    "budget": [
+        {
+            "value": "21-50K"
+        },
+        {
+            "value": "51-100K"
+        },
+        {
+            "value": "100K+"
+        }
+    ],
+    "timeline": [
+        {
+            "value": "1-2 Months"
+        },
+        {
+            "value": "3-5 Months"
+        },
+        {
+            "value": "6-9 Months"
+        },
+        {
+            "value": "Other"
+        }
+    ],
+    "industry": [
+        {
+            "value": "Agricultural"
+        },
+        {
+            "value": "Aircraft Hangar"
+        },
+        {
+            "value": "Auto Shop"
+        },
+        {
+            "value": "Barn"
+        },
+        {
+            "value": "Barndominium / Home"
+        },
+        {
+            "value": "Brewery"
+        },
+        {
+            "value": "Car Wash"
+        },
+        {
+            "value": "Carport"
+        },
+        {
+            "value": "Church"
+        },
+        {
+            "value": "Commercial"
+        },
+        {
+            "value": "Garage"
+        },
+        {
+            "value": "Gymnasium"
+        },
+        {
+            "value": "Horse Stable"
+        },
+        {
+            "value": "Industrial"
+        },
+        {
+            "value": "Manufacturing"
+        },
+        {
+            "value": "Medical"
+        },
+        {
+            "value": "Climate Controlled Storage"
+        },
+        {
+            "value": "Office"
+        },
+        {
+            "value": "Outbuilding"
+        },
+        {
+            "value": "Rec Center"
+        },
+        {
+            "value": "Retail"
+        },
+        {
+            "value": "School"
+        },
+        {
+            "value": "Shed"
+        },
+        {
+            "value": "Sports Facility"
+        },
+        {
+            "value": "Storage"
+        },
+        {
+            "value": "Strip Mall"
+        },
+        {
+            "value": "Warehouse"
+        },
+        {
+            "value": "Workshop"
+        },
+        {
+            "value": "Other"
+        }
+    ],
+    "feedback": [
+        {
+            "value": "Advertisement"
+        },
+                {
+            "value": "Social Media"
+        },
+                {
+            "value": "Friend or family referral"
+        },
+                {
+            "value": "Search Engine"
+        },
+                {
+            "value": "Other"
+        }
+    ]
+}

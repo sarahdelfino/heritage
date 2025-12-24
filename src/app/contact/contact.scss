@@ -1,0 +1,65 @@
+@use '@angular/material' as mat;
+
+.contact-container {
+    padding-top: 20px;
+    max-width: fit-content;
+    margin: auto;
+}
+
+mat-stepper {
+  @include mat.stepper-overrides((
+    header-icon-background-color: #500909,
+    header-selected-state-icon-background-color: #c9a14a
+  ));
+}
+
+mat-radio-group {
+      @include mat.radio-overrides((
+    checked-ripple-color: #500909,
+    ripple-color: #500909,
+    selected-icon-color: #500909,
+    selected-pressed-icon-color: #500909,
+    selected-focus-icon-color: #500909,
+    selected-hover-icon-color: #c9a14a
+    
+  ));
+}
+
+#intakeForm {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+mat-stepper {
+    max-width: 700px;
+}
+
+mat-radio-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.step-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+mat-form-field, mat-radio-group {
+    margin: 10px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    margin: auto;
+}
+
+button {
+    margin-bottom: 10px;
+}

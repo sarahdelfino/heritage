@@ -1,0 +1,94 @@
+{
+    "difference": [
+        {
+            "title": "Affordable Strength",
+            "description": "Built to last without the sky-high price tag."
+        },
+        {
+            "title": "Fast Delivery",
+            "description": "Buildings delivered in as little as 2-3 weeks."
+        },
+        {
+            "title": "Save on Concrete",
+            "description": "Engineered to reduce foundation costs."
+        },
+        {
+            "title": "Trusted Crews",
+            "description": "Reliable erection services across the Southeast."
+        }
+    ],
+    "process": [
+        {
+            "icon": "clarification.png",
+            "title": "Consultation",
+            "description": "Discuss your needs, site requirements, and budget to create the perfect solution."
+        },
+        {
+                        "icon": "blueprint.png",
+            "title": "Design & Engineering",
+            "description": "Our team develops detailed plans and structural engineering for your approval."
+        },
+        {
+                        "icon": "tool.png",
+            "title": "Manufacturing",
+            "description": "Precision fabrication of all components in our state-of-the-art-facility."
+        },
+        {
+                        "icon": "manufacture.png",
+            "title": "Installation",
+            "description": "Professional on-site assembly with minimal disruption to your operations."
+        }
+    ],
+    "footer": [
+        {
+            "title": "Services",
+            "links": [
+                {
+                    "name": "Commercial",
+                    "link": "/#services"
+                },
+                {
+                    "name": "Agricultural",
+                    "link": "/#services"
+                },
+                {
+                    "name": "Residential",
+                    "link": "/#services"
+                },
+                {
+                    "name": "Custom",
+                    "link": "/#services"
+                }
+            ]
+        },
+        {
+            "title": "Company",
+            "links": [
+                {
+                    "name": "About Us",
+                    "link": "/#about"
+                },
+                {
+                    "name": "Portfolio",
+                    "link": "/#portfolio"
+                },
+                {
+                    "name": "Testimonials",
+                    "link": "/#testimonials"
+                }
+            ]
+        },
+        {
+            "title": "Contact",
+            "links": [
+                {
+                    "name": "(843) 867-5309"
+                },
+                {
+                    "name": "info@heritagesteelbuildings.com",
+                    "link": "mailto:info@heritagesteelbuildings.com"
+                }
+            ]
+        }
+    ]
+}

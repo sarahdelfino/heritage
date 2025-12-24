@@ -1,0 +1,389 @@
+/* =========================
+   Base tokens + helpers
+   ========================= */
+:root{
+  --max: 1200px;
+  --pad: clamp(16px, 4vw, 32px);
+  --radius: 16px;
+  --border: rgba(0,0,0,.12);
+  --shadow: 0 18px 40px rgba(0,0,0,.18);
+  --maroon: #500909;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #111;
+}
+
+/* =========================
+   Nav
+   ========================= */
+.nav-container{
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+  background: #e4e4e4;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+img.logo{
+  height: 56px;
+  max-height: 56px;
+  width: auto;
+}
+
+.nav-container > button.secondary {
+    padding: 8px;
+    font-size: 0.8em;
+}
+
+@media screen and (min-width: 600px) {
+    .nav-container {
+        padding: 0px 20px;
+    }
+    .nav-container > button.secondary {
+        font-size: 1em;
+            padding: 8px 24px;
+    }
+}
+
+/* =========================
+   Hero video
+   ========================= */
+.video-container{
+  width: 100%;
+  max-width: var(--max);
+  margin: 18px auto 0;
+  aspect-ratio: 16 / 7;
+  position: relative;
+  color: white;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.video-container video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-overlay{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,.40) 0%,
+    rgba(0,0,0,.18) 45%,
+    rgba(0,0,0,.03) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+
+.overlay-text{
+  padding: clamp(20px, 5vw, 56px);
+  max-width: 680px;
+}
+
+.header-title{
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  line-height: 1.05;
+  font-size: clamp(32px, 4vw, 58px);
+}
+
+.header-subtitle{
+  margin: 0 0 22px;
+  line-height: 1.45;
+  font-size: clamp(16px, 1.6vw, 20px);
+  color: rgba(255,255,255,.92);
+}
+
+.btn-primary,
+button.primary{
+  box-shadow: 0 10px 22px rgba(0,0,0,.25);
+}
+
+.btn-primary:hover,
+button.primary:hover{
+  transform: translateY(-1px);
+}
+
+button.secondary{
+
+
+  border-color: rgba(255,255,255,.35);
+}
+
+button.secondary:hover{
+  background: rgba(255,255,255,.08);
+}
+
+/* =========================
+   Cards section
+   ========================= */
+.section{
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px clamp(16px, 4vw, 32px);;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 18px;
+  max-width: 980px;
+  margin: 20px auto;
+}
+
+/* mat-card is a real element selector, so this is safe */
+mat-card{
+  grid-column: span 6;
+  border-radius: var(--radius) !important;
+  overflow: hidden;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+mat-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(0,0,0,.14);
+}
+
+@media (max-width: 820px){
+  mat-card{ grid-column: span 12; }
+}
+
+mat-card img{
+  object-fit: cover;
+  height: 220px;
+  width: 100%;
+}
+
+mat-card-content{
+  padding: 16px 18px 18px;
+}
+
+mat-card-title{
+  font-weight: 750;
+  letter-spacing: .01em;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================
+   Process section
+   ========================= */
+
+.section h2{
+  font-size: clamp(24px, 3vw, 34px);
+}
+
+.process-subtitle{
+  margin: 10px 0 26px;
+  color: rgba(0,0,0,.65);
+}
+
+.steps{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+.step {
+  grid-column: span 3;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+img.process-icon {
+    width: 48px;
+}
+
+.step h3{
+  margin: 0 0 8px;
+  font-weight: 750;
+}
+
+.step-desc{
+  color: rgba(0,0,0,.72);
+  line-height: 1.45;
+}
+
+@media (max-width: 900px){
+  .step{ grid-column: span 6; }
+}
+@media (max-width: 560px){
+  .step{ grid-column: span 12; }
+}
+
+/* =========================
+   CTA section
+   ========================= */
+.cta{
+  background-color: #500909;   /* solid maroon, no gradient */
+  background-image: none !important;
+  color: #fff;
+  padding: 70px 0;
+  text-align: center;
+}
+
+
+.cta-text{
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+
+.cta-title{
+  margin: 0 0 10px;
+  font-size: clamp(26px, 3.2vw, 40px);
+}
+
+.cta-subtitle{
+  margin: 0 0 22px;
+  color: rgba(255,255,255,.92);
+  line-height: 1.5;
+}
+
+/* =========================
+   Mobile fixes (drop-in)
+   ========================= */
+
+/* Prevent accidental horizontal scroll */
+html, body { overflow-x: hidden; } 
+
+@media (max-width: 640px){
+
+  div.categories {
+    display: none;
+  }
+
+  /* Nav: shorter and more compact */
+  .nav-container{
+    height: 64px;
+    padding: 0 8px;
+  }
+  img.logo{
+    height: 44px;
+    max-height: 44px;
+  }
+
+  /* Hero: taller, centered text, stronger overlay */
+  .video-container{
+    margin-top:0px;
+    aspect-ratio: 4 / 5; /* key change: gives text room */
+  }
+
+  .video-overlay{
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(
+      180deg,
+      rgba(0,0,0,.70) 0%,
+      rgba(0,0,0,.55) 55%,
+      rgba(0,0,0,.35) 100%
+    );
+  }
+
+  .overlay-text{
+    max-width: 520px;
+    padding: 20px 18px;
+  }
+
+  .header-title{
+    font-size: clamp(26px, 7vw, 36px);
+    letter-spacing: .03em;
+    line-height: 1.08;
+  }
+
+  .header-subtitle{
+    font-size: 16px;
+    line-height: 1.45;
+    margin-bottom: 16px;
+  }
+
+  .btn-primary{
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  /* Sections: reduce padding so it breathes */
+  .cards-section{
+    padding: 36px 16px;
+  }
+  .process-section{
+    padding: 44px 16px;
+  }
+
+  /* Cards: slightly smaller image height */
+  mat-card img{
+    height: 190px;
+  }
+
+  /* CTA: stack buttons + remove inline margin-right impact */
+  .cta{
+    padding: 56px 0;
+  }
+
+  .cta-text{
+    padding: 0 16px;
+  }
+
+  .cta .secondary,
+  .cta .primary{
+    width: 100%;
+    max-width: 360px;
+    display: block;
+    margin: 10px auto 0 !important; /* overrides your inline style */
+  }
+}
+
+.footer-container {
+    padding: 2em;
+}
+
+.footer-section-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 24px auto;
+}
+
+.footer-section {
+    margin-right: 24px;
+}
+
+p.footer-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+div.footer-text > p, a {
+    margin: 0px auto 4px;
+}
+
+div.footer-text {
+    color: gray;
+}
+
+
