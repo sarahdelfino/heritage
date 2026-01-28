@@ -110,26 +110,13 @@ img.logo{
   color: rgba(255,255,255,.92);
 }
 
-.btn-primary,
-button.primary{
-  box-shadow: 0 10px 22px rgba(0,0,0,.25);
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: auto;
 }
-
-.btn-primary:hover,
-button.primary:hover{
-  transform: translateY(-1px);
-}
-
-button.secondary{
-
-
-  border-color: rgba(255,255,255,.35);
-}
-
-button.secondary:hover{
-  background: rgba(255,255,255,.08);
-}
-
 /* =========================
    Cards section
    ========================= */
@@ -181,7 +168,11 @@ mat-card-title{
 
 .categories {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+}
+
+div.categories > img {
+  max-width: 30vw;
 }
 
 /* =========================
@@ -223,6 +214,11 @@ img.process-icon {
 .step-desc{
   color: rgba(0,0,0,.72);
   line-height: 1.45;
+}
+
+img.impact {
+  width: 100%;
+  margin-top: 24px;
 }
 
 @media (max-width: 900px){
@@ -318,9 +314,7 @@ html, body { overflow-x: hidden; }
     margin-bottom: 16px;
   }
 
-  .btn-primary{
-    width: 100%;
-    max-width: 320px;
+  .buttons {
     justify-content: center;
   }
 
@@ -357,12 +351,13 @@ html, body { overflow-x: hidden; }
 
 .footer-container {
     padding: 2em;
+    border-top: 1px solid #500909;
 }
 
 .footer-section-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     max-width: 960px;
     margin: 24px auto;
 }
@@ -386,4 +381,6 @@ div.footer-text {
     color: gray;
 }
 
-
+#intakeForm {
+  scroll-margin-top: 96px;
+}

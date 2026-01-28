@@ -1,9 +1,11 @@
 @use '@angular/material' as mat;
 
 .contact-container {
-    padding-top: 20px;
     max-width: fit-content;
     margin: auto;
+    border: 1px solid #500909;
+    border-radius: 4px;
+    padding: 2rem;
 }
 
 mat-stepper {
@@ -11,6 +13,7 @@ mat-stepper {
     header-icon-background-color: #500909,
     header-selected-state-icon-background-color: #c9a14a
   ));
+  background-color: transparent;
 }
 
 mat-radio-group {

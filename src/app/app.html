@@ -14,16 +14,12 @@
                 Designed, engineered, and installed by experts who know how to get it done right — from concept to
                 completion.
             </p>
-            <button class="btn-primary" (click)="contactVisible = !contactVisible">Get a Quote</button>
+            <div class="buttons">
+                <button class="primary" (click)="contactButtonClicked()">Get a Quote</button>
+            </div>
         </div>
     </div>
 </div>
-@if (contactVisible) {
-    <div class="section">
-            <h2>Intake Form</h2>
-            <app-contact></app-contact>
-    </div>
-}
 <div class="section">
     <h2>Built to last for generations</h2>
     <div class="cards">
@@ -38,8 +34,14 @@
         }
     </div>
 </div>
-<div class="categories">
-<img src="categories.png">
+<div class="section">
+    <h2>Architecture Services Available</h2>
+    <div class="categories">
+        <!-- <img src="categories.png"> -->
+        <img src="arch1.webp">
+        <img src="arch2.webp">
+        <img src="arch3.webp">
+    </div>
 </div>
 <div class="section">
     <h2>Our Process</h2>
@@ -55,34 +57,34 @@
         </div>
         }
     </div>
+    <img class="impact" src="Impact.jpg">
 </div>
 <div class="cta">
     <div class="cta-text">
         <h1 class="cta-title">Ready to get started?</h1>
         <p class="cta-subtitle">Get a free consultation and detailed quote for your metal building project. Our team is
             ready to bring your vision to life.</p>
-        <button (click)="bottomContactVisible = !bottomContactVisible" class="secondary" style="margin-right: 10px;">Request a Quote</button>
-        <button class="primary">Call now</button>
+        <button (click)="contactButtonClicked()" class="secondary" style="margin-right: 10px;">Request a Quote</button>
     </div>
 </div>
 @if (bottomContactVisible) {
-    <div class="section">
-            <h2>Intake Form</h2>
-            <app-contact></app-contact>
-    </div>
+<div id="intakeForm" class="section">
+    <h2>Intake Form</h2>
+    <app-contact></app-contact>
+</div>
 }
 <div class="footer-container">
     <img class="logo" src="HSB-nobg.png">
     <div class="footer-section-container">
-    @for (section of footer; track $index) {
-    <div class="footer-section">
-        <p class="footer-title">{{ section.title }}</p>
-        @for (link of section.links; track $index) {
-        <div class="footer-text">
-            <p [routerLink]="link?.link">{{ link.name }}</p>
+        @for (section of footer; track $index) {
+        <div class="footer-section">
+            <p class="footer-title">{{ section.title }}</p>
+            @for (link of section.links; track $index) {
+            <div class="footer-text">
+                <p [routerLink]="link?.link">{{ link.name }}</p>
+            </div>
+            }
         </div>
         }
     </div>
-    }
-</div>
 </div>

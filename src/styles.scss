@@ -13,19 +13,7 @@ html {
 }
 
 body {
-  
-  
-  
   color-scheme: light;
-
-  
-  
-  
-  
-  
-  
-
-  
   margin: 0;
 }
 
@@ -69,6 +57,7 @@ body {
 }
 
 button {
+  width: 224px;
   padding: 12px 24px;
   color: white;
   font-size: 1.25em;
@@ -76,20 +65,34 @@ button {
   border-radius: 4px;
   background-color: #500909;
   cursor: pointer;
+  box-shadow: 0 16px 34px rgba(0,0,0,.14);
+
+  &:hover {
+    transform: translateY(-1px);
+    cursor: pointer;
+  }
 }
 
 .primary {
   background-color: #500909;
-  border: 1px solid white;
+  border: 2px solid #500909;
+
+  &:hover {
+    background: rgb(193, 146, 146, .6);
+  }
 }
 
 .secondary {
-    background-color: #c9a14a;
-  border: 1px solid #c9a14a;
+  background-color: #c9a14a;
+  border: 2px solid #c9a14a;
+
+  &:hover {
+    background: rgb(204, 178, 108, .6);
+  }
 }
 
 .outline {
-  border: 1px solid #500909;
+  border: 2px solid #500909;
   background-color: transparent;
   color: #500909;
 }

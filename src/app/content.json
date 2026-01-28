@@ -44,6 +44,10 @@
             "title": "Services",
             "links": [
                 {
+                    "name": "Architecture",
+                    "link": "/#services"
+                },
+                {
                     "name": "Commercial",
                     "link": "/#services"
                 },
@@ -58,23 +62,6 @@
                 {
                     "name": "Custom",
                     "link": "/#services"
-                }
-            ]
-        },
-        {
-            "title": "Company",
-            "links": [
-                {
-                    "name": "About Us",
-                    "link": "/#about"
-                },
-                {
-                    "name": "Portfolio",
-                    "link": "/#portfolio"
-                },
-                {
-                    "name": "Testimonials",
-                    "link": "/#testimonials"
                 }
             ]
         },
