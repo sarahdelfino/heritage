@@ -4,10 +4,11 @@ import {MatCardModule} from '@angular/material/card';
 import content from "./content.json";
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { Contact } from "./contact/contact";
+import { Carousel } from "./carousel/carousel";
 
 @Component({
   selector: 'app-root',
-  imports: [MatCardModule, CommonModule, RouterLink, Contact],
+  imports: [MatCardModule, CommonModule, RouterLink, Contact, Carousel],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

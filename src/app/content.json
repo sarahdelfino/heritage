@@ -2,19 +2,44 @@
     "difference": [
         {
             "title": "Affordable Strength",
-            "description": "Built to last without the sky-high price tag."
+            "description": "Precision components, no welding required. Decades of corrosion-free durability without traditional red-iron prices.",
+            "image": "ex1.svg"
         },
         {
-            "title": "Fast Delivery",
-            "description": "Buildings delivered in as little as 2-3 weeks."
+            "title": "Shorter Lead Times",
+            "description": "Engineered and stamped building and foundation drawings within days. Building delivery in as little as three weeks.",
+            "image": "ex2.jpg"
         },
         {
             "title": "Save on Concrete",
-            "description": "Engineered to reduce foundation costs."
+            "description": "20-25% less concrete required than traditional red-iron buildings. No pre-set anchor bolts.",
+            "image": "ex3.svg",
+            "style": "object-position: center 70%;"
         },
         {
-            "title": "Trusted Crews",
-            "description": "Reliable erection services across the Southeast."
+            "title": "Simple Installation",
+            "description": "Easy to build. No lugging of heavy components. Not DIY-ing? Let us know! We have trusted people to come to your site and handle erection.",
+            "image": "ex4.jpg",
+            "style": "object-position: top;"
+        }
+    ],
+    "carousel": [
+        {
+            "title": "Architecture Services Available",
+            "images": [
+                "arch1.webp",
+                "arch2.webp",
+                "arch3.webp"
+            ]
+        },
+        {
+            "title": "Browse our Floor Plans",
+            "images": [
+                "floorplan1.jpg",
+                "floorplan2.jpg",
+                "floorplan3.jpg",
+                "floorplan4.jpg"
+            ]
         }
     ],
     "process": [
@@ -24,17 +49,17 @@
             "description": "Discuss your needs, site requirements, and budget to create the perfect solution."
         },
         {
-                        "icon": "blueprint.png",
+            "icon": "blueprint.png",
             "title": "Design & Engineering",
             "description": "Our team develops detailed plans and structural engineering for your approval."
         },
         {
-                        "icon": "tool.png",
+            "icon": "tool.png",
             "title": "Manufacturing",
             "description": "Precision fabrication of all components in our state-of-the-art-facility."
         },
         {
-                        "icon": "manufacture.png",
+            "icon": "manufacture.png",
             "title": "Installation",
             "description": "Professional on-site assembly with minimal disruption to your operations."
         }

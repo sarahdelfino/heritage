@@ -1,0 +1,8 @@
+<h3>{{ title }}</h3>
+<div class="carousel-container">
+    <button #arrow class="arrow left" (click)="prevImage()"></button>
+    <button #arrow class="arrow right" (click)="nextImage()"></button>
+@for (img of images; track $index) {
+<img #cImg id="{{ $index }}" class="carousel-img" [src]="img">
+}
+</div>

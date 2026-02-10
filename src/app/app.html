@@ -1,6 +1,6 @@
 <div class="nav-container">
     <img class="logo" src="HSB-nobg.png">
-    <button class="secondary">Design your building</button>
+    <button class="secondary design-btn">Design your building in 3D</button>
 </div>
 <div class="video-container">
     <video autoplay loop muted playsinline preload="auto" [muted]="true">
@@ -9,10 +9,8 @@
     </video>
     <div class="video-overlay">
         <div class="overlay-text">
-            <h1 class="header-title">The steel building experts</h1>
-            <p class="header-subtitle">
-                Designed, engineered, and installed by experts who know how to get it done right — from concept to
-                completion.
+            <h1 class="header-title">Built to last generations</h1>
+            <p class="header-subtitle">Design | Architectural & Engineering | Fabrication | Delivery | Installation
             </p>
             <div class="buttons">
                 <button class="primary" (click)="contactButtonClicked()">Get a Quote</button>
@@ -21,11 +19,11 @@
     </div>
 </div>
 <div class="section">
-    <h2>Built to last for generations</h2>
+    <h2>Why Cold Formed?</h2>
     <div class="cards">
         @for (data of differences; track $index) {
         <mat-card appearance="outlined">
-            <img class="diff" mat-card-image [src]="'/difference-' + $index + '.jpg'">
+            <img [style]="data.style" class="diff" mat-card-image [src]="data?.image">
             <mat-card-content>
                 <mat-card-title>{{ data.title }}</mat-card-title>
                 {{ data.description }}
@@ -34,30 +32,9 @@
         }
     </div>
 </div>
-<div class="section" style="margin: 0px auto;">
-    <h2>Architecture Services Available</h2>
-    <div class="categories">
-        <!-- <img src="categories.png"> -->
-        <img src="arch1.webp">
-        <img src="arch2.webp">
-        <img src="arch3.webp">
-    </div>
-</div>
-<div class="section">
-    <h2>Our Process</h2>
-    <p class="process-subtitle">A streamlined approach from concept to completion</p>
-    <div class="steps">
-        @for (step of process; track $index) {
-        <div class="step" [id]="$index + 1">
-            <img class="process-icon" [src]="step.icon">
-            <h3>{{ step.title }}</h3>
-            <div class="step-desc">
-                {{ step.description }}
-            </div>
-        </div>
-        }
-    </div>
-    <img class="impact" src="Impact.jpg">
+<div class="section carousels">
+<app-carousel type="architecture"></app-carousel>
+<app-carousel type="floorPlans"></app-carousel>
 </div>
 <div class="cta">
     <div class="cta-text">
@@ -73,6 +50,10 @@
     <app-contact></app-contact>
 </div>
 }
+<div class="section">
+    <h2>Precision Components | Ready in 3-5 weeks</h2>
+    <img class="frame" src="framing.svg">
+</div>
 <div class="footer-container">
     <img class="logo" src="HSB-nobg.png">
     <div class="footer-section-container">

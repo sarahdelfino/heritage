@@ -28,13 +28,23 @@ body{
   justify-content: space-between;
   padding: 0px;
   background: #e4e4e4;
-  border-bottom: 1px solid rgba(0,0,0,.08);
 }
 
 img.logo{
   height: 56px;
   max-height: 56px;
   width: auto;
+}
+
+button.design-btn {
+  width: fit-content;
+}
+
+img.frame {
+  display: flex;
+  max-width: 900px;
+  width: 90vw;
+  margin: -20% auto;
 }
 
 .nav-container > button.secondary {
@@ -58,7 +68,6 @@ img.logo{
 .video-container{
   width: 100%;
   max-width: var(--max);
-  margin: 18px auto 0;
   aspect-ratio: 16 / 7;
   position: relative;
   color: white;
@@ -126,9 +135,18 @@ img.logo{
   padding: 20px clamp(16px, 4vw, 32px);;
 }
 
+div.section.carousels {
+  padding: 0px;
+}
+
+.carousels {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
 .cards{
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
   gap: 18px;
   max-width: 980px;
   margin: 20px auto;
@@ -153,7 +171,8 @@ mat-card:hover{
 
 mat-card img{
   object-fit: cover;
-  height: 220px;
+  object-position: 10% 40%;
+  height: 300px;
   width: 100%;
 }
 
