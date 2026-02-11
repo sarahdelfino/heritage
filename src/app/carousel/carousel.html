@@ -1,6 +1,5 @@
-<h3>{{ title }}</h3>
 <div class="carousel-container">
-<p-carousel [value]="images()" [numVisible]="1" [numScroll]="1" circular="true">
+<p-carousel class="gold-carousel" [value]="images()" [numVisible]="1" [numScroll]="1" circular="true" autoplayInterval="3000">
         <ng-template let-img #item>
 <img id="{{ img.id + '_' + type}}" [src]="img.image">
 </ng-template>
