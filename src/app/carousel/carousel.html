@@ -1,8 +1,8 @@
 <h3>{{ title }}</h3>
 <div class="carousel-container">
-    <button #arrow class="arrow left" (click)="prevImage()"></button>
-    <button #arrow class="arrow right" (click)="nextImage()"></button>
-@for (img of images; track $index) {
-<img #cImg id="{{ $index }}" class="carousel-img" [src]="img">
-}
+<p-carousel [value]="images()" [numVisible]="1" [numScroll]="1" circular="true">
+        <ng-template let-img #item>
+<img id="{{ img.id + '_' + type}}" [src]="img.image">
+</ng-template>
+</p-carousel>
 </div>

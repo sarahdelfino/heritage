@@ -146,15 +146,17 @@ div.section.carousels {
 }
 
 .cards{
-  display: grid;
-  gap: 18px;
-  max-width: 980px;
+  // display: grid;
+  // gap: 18px;
+  display: flex;
+  justify-content: space-evenly;
+  // max-width: 980px;
   margin: 20px auto;
 }
 
 /* mat-card is a real element selector, so this is safe */
 mat-card{
-  grid-column: span 6;
+  width: 250px;
   border-radius: var(--radius) !important;
   overflow: hidden;
   transition: transform .15s ease, box-shadow .15s ease;
@@ -165,14 +167,10 @@ mat-card:hover{
   box-shadow: 0 16px 34px rgba(0,0,0,.14);
 }
 
-@media (max-width: 820px){
-  mat-card{ grid-column: span 12; }
-}
-
 mat-card img{
   object-fit: cover;
   object-position: 10% 40%;
-  height: 300px;
+  height: 200px;
   width: 100%;
 }
 

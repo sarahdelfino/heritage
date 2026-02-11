@@ -1,20 +1,6 @@
-
-
-
-
-
-@use '@angular/material'as mat;
-
-html {
-  @include mat.theme((
-      typography: Roboto,
-      density: 0,
-    ));
-}
-
 body {
-  color-scheme: light;
   margin: 0;
+  color: black;
 }
 
 :root {
