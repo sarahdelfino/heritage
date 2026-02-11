@@ -3,7 +3,7 @@
         {
             "title": "Affordable Strength",
             "description": "Precision components, no welding required. Decades of corrosion-free durability without traditional red-iron prices.",
-            "image": "ex1.svg"
+            "image": "ex1.png"
         },
         {
             "title": "Shorter Lead Times",
@@ -13,7 +13,7 @@
         {
             "title": "Save on Concrete",
             "description": "20-25% less concrete required than traditional red-iron buildings. No pre-set anchor bolts.",
-            "image": "ex3.svg",
+            "image": "ex3.png",
             "style": "object-position: center 70%;"
         },
         {
@@ -27,18 +27,39 @@
         {
             "title": "Architecture Services Available",
             "images": [
-                "arch1.webp",
-                "arch2.webp",
-                "arch3.webp"
+                {
+                    "id": "1",
+                    "image": "arch1.webp"
+                },
+                {
+                    "id": "2",
+                    "image": "arch2.webp"
+                },
+                {
+                    "id": "3",
+                    "image": "arch3.webp"
+                }
             ]
         },
         {
             "title": "Browse our Floor Plans",
             "images": [
-                "floorplan1.jpg",
-                "floorplan2.jpg",
-                "floorplan3.jpg",
-                "floorplan4.jpg"
+                {
+                    "id": "1",
+                    "image": "floorplan1.jpg"
+                },
+                {
+                    "id": "2",
+                    "image": "floorplan2.jpg"
+                },
+                {
+                    "id": "3",
+                    "image": "floorplan3.jpg"
+                },
+                {
+                    "id": "4",
+                    "image": "floorplan4.jpg"
+                }
             ]
         }
     ],

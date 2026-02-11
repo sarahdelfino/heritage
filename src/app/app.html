@@ -26,15 +26,34 @@
             <img [style]="data.style" class="diff" mat-card-image [src]="data?.image">
             <mat-card-content>
                 <mat-card-title>{{ data.title }}</mat-card-title>
-                {{ data.description }}
+                <p>{{ data.description }}</p>
             </mat-card-content>
         </mat-card>
         }
     </div>
 </div>
-<div class="section carousels">
-<app-carousel type="architecture"></app-carousel>
-<app-carousel type="floorPlans"></app-carousel>
+<div class="carousels">
+    <div class="group">
+        <h2>Architecture Services Available</h2>
+        <app-carousel type="architecture"></app-carousel>
+    </div>
+    <div class="group">
+        <h2>Browse our Floor Plans</h2>
+        <app-carousel type="floorPlans"></app-carousel>
+    </div>
+</div>
+<div class="overlay3d-container">
+    <img src="3d.png">
+    <div class="overlay3d">
+        <div class="overlay3d-text">
+            <h1>Use our 3D configurator to create your design</h1>
+            <button class="primary">Design your building now</button>
+        </div>
+    </div>
+</div>
+<div class="comp-section">
+    <h2 style="max-width: 1300px; margin: auto;">Precision Components | Ready in 3-5 weeks</h2>
+    <img class="frame" src="framing.png">
 </div>
 <div class="cta">
     <div class="cta-text">
@@ -50,10 +69,6 @@
     <app-contact></app-contact>
 </div>
 }
-<div class="section">
-    <h2>Precision Components | Ready in 3-5 weeks</h2>
-    <img class="frame" src="framing.svg">
-</div>
 <div class="footer-container">
     <img class="logo" src="HSB-nobg.png">
     <div class="footer-section-container">

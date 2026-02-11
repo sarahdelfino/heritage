@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { toSignal } from '@angular/core/rxjs-interop';
@@ -66,7 +66,7 @@ export function dimensionValidator(opts: { minFeet: number; maxFeet: number; max
 
 @Component({
   selector: 'app-contact',
-  imports: [CommonModule, ReactiveFormsModule, MatInputModule, MatRadioModule, MatSelectModule, MatStepperModule],
+  imports: [ReactiveFormsModule, MatInputModule, MatRadioModule, MatSelectModule, MatStepperModule],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

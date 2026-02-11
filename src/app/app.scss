@@ -40,11 +40,17 @@ button.design-btn {
   width: fit-content;
 }
 
+.comp-section {
+  background-color: white;
+  padding: 40px 10px;
+}
+
 img.frame {
   display: flex;
-  max-width: 900px;
+  justify-content: center;
+  max-width: 1200px;
   width: 90vw;
-  margin: -20% auto;
+  margin: auto;
 }
 
 .nav-container > button.secondary {
@@ -101,7 +107,12 @@ img.frame {
 
 .overlay-text{
   padding: clamp(20px, 5vw, 56px);
-  max-width: 680px;
+  text-align: center;
+  // max-width: 680px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .header-title{
@@ -122,7 +133,7 @@ img.frame {
 .buttons {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   margin: auto;
 }
@@ -132,29 +143,102 @@ img.frame {
 .section{
   max-width: 1200px;
   margin: 20px auto;
-  padding: 20px clamp(16px, 4vw, 32px);;
+  padding: 10px;
 }
 
 div.section.carousels {
   padding: 0px;
 }
 
+.overlay3d{
+  position: absolute;
+  inset: 0;
+background: linear-gradient(
+  180deg,
+  rgba(0,0,0,.75) 0%,
+  rgba(0,0,0,.55) 40%,
+  rgba(0,0,0,.35) 75%,
+  rgba(0,0,0,.15) 100%
+);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.overlay3d-container{
+  position: relative;
+  color: white;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.overlay3d-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+  overflow: hidden;
+}
+
+.overlay3d-text{
+  padding: clamp(20px, 5vw, 56px);
+  text-align: left;
+  position: absolute;
+  max-width: 400px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .carousels {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
+  background-color: #500909;
+  color: white;
+  padding: 20px;
 }
 
 .cards{
-  display: grid;
-  gap: 18px;
-  max-width: 980px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   margin: 20px auto;
+}
+
+@media screen and (max-width: 1000px) {
+  .carousels {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  mat-card {
+    width: 100% !important;
+  }
+  .overlay3d-text {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+  }
+  .overlay3d-text h1 {
+    font-size: 1.75rem;
+    margin: 0px;
+  }
+  .overlay3d-text button.primary {
+    width: 80%;
+    margin-top: 16px;
+  }
 }
 
 /* mat-card is a real element selector, so this is safe */
 mat-card{
-  grid-column: span 6;
+  width: 270px;
   border-radius: var(--radius) !important;
   overflow: hidden;
   transition: transform .15s ease, box-shadow .15s ease;
@@ -165,14 +249,10 @@ mat-card:hover{
   box-shadow: 0 16px 34px rgba(0,0,0,.14);
 }
 
-@media (max-width: 820px){
-  mat-card{ grid-column: span 12; }
-}
-
 mat-card img{
   object-fit: cover;
   object-position: 10% 40%;
-  height: 300px;
+  height: 200px;
   width: 100%;
 }
 
@@ -198,13 +278,19 @@ div.categories > img {
    Process section
    ========================= */
 
-.section h2{
+.section h2, .carousels h2, .comp-section h2{
   font-size: clamp(24px, 3vw, 34px);
 }
 
 .process-subtitle{
   margin: 10px 0 26px;
   color: rgba(0,0,0,.65);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .steps{

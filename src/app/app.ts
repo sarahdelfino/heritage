@@ -2,13 +2,13 @@ import { afterNextRender, Component, ElementRef, inject, signal, ViewChild } fro
 import { RouterOutlet, RouterLink } from '@angular/router';
 import {MatCardModule} from '@angular/material/card';
 import content from "./content.json";
-import { CommonModule, ViewportScroller } from '@angular/common';
+import { ViewportScroller } from '@angular/common';
 import { Contact } from "./contact/contact";
 import { Carousel } from "./carousel/carousel";
 
 @Component({
   selector: 'app-root',
-  imports: [MatCardModule, CommonModule, RouterLink, Contact, Carousel],
+  imports: [MatCardModule, RouterLink, Contact, Carousel],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
