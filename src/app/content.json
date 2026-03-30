@@ -29,15 +29,19 @@
             "images": [
                 {
                     "id": "1",
-                    "image": "arch1.webp"
+                    "image": "arch1.png"
                 },
                 {
                     "id": "2",
-                    "image": "arch2.webp"
+                    "image": "arch2.png"
                 },
                 {
                     "id": "3",
-                    "image": "arch3.webp"
+                    "image": "arch3.png"
+                },
+                {
+                    "id": "4",
+                    "image": "arch4.png"
                 }
             ]
         },

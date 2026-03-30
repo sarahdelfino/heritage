@@ -19,7 +19,7 @@
                         <mat-radio-button value="architect">Architect</mat-radio-button>
                     </mat-radio-group>
                     }
-                    <mat-radio-group aria-label="Select a build type" formControlName="drawings">
+                    <mat-radio-group aria-label="Do you have drawings of your building?" formControlName="drawings">
                         <mat-label>Do you have drawings of your building?</mat-label>
                         <mat-radio-button value="arch">Architectural drawings</mat-radio-button>
                         <mat-radio-button value="sketches">Rough sketches</mat-radio-button>
@@ -42,15 +42,15 @@
                 <div class="step">
                         <mat-form-field>
                             <mat-label>Building Width</mat-label>
-                            <input matInput required formControlName="buildingWidth" />
+                            <input matInput required formControlName="buildingWidth" type="number" />
                         </mat-form-field>
                         <mat-form-field>
                             <mat-label>Building Length</mat-label>
-                            <input matInput required formControlName="buildingLength" />
+                            <input matInput required formControlName="buildingLength" type="number" />
                         </mat-form-field>
                         <mat-form-field>
                             <mat-label>Wall Height</mat-label>
-                            <input matInput required formControlName="wallHeight" />
+                            <input matInput required formControlName="wallHeight" type="number" />
                         </mat-form-field>
                         <mat-form-field>
                             <mat-label>City</mat-label>
@@ -62,7 +62,7 @@
                         </mat-form-field>
                         <mat-form-field>
                             <mat-label>Zipcode</mat-label>
-                            <input matInput required formControlName="buildingZip" />
+                            <input matInput required formControlName="buildingZip"  type="number" />
                         </mat-form-field>
                     <mat-form-field>
                         <mat-label>Roof Pitch</mat-label>
@@ -82,7 +82,7 @@
                     </mat-form-field>
                     <mat-form-field>
                         <mat-label>Timeline</mat-label>
-                        <mat-select formControlName="budget">
+                        <mat-select formControlName="timeline">
                             @for (timeline of timelines; track $index) {
                             <mat-option [value]="timeline.value">{{ timeline.value }}</mat-option>
                             }
@@ -105,11 +105,11 @@
                         </mat-form-field>
                         <mat-form-field>
                             <mat-label>Email</mat-label>
-                            <input matInput required formControlName="email" />
+                            <input matInput required formControlName="email" type="email" />
                         </mat-form-field>
                         <mat-form-field>
                             <mat-label>Phone</mat-label>
-                            <input matInput required formControlName="phone" />
+                            <input matInput required formControlName="phone" type="number" />
                         </mat-form-field>
                     <mat-form-field>
                         <mat-label>What industry is your project for?</mat-label>
@@ -132,7 +132,7 @@
                         <textarea matInput formControlName="notes"></textarea>
                     </mat-form-field>
                     <button class="outline" matButton matStepperPrevious type="button">Back</button>
-                    <button class="primary" matButton type="submit">Submit</button>
+                    <button (click)="submit(intakeForm)" class="primary" matButton type="submit">Submit</button>
                 </div>
             </mat-step>
         </mat-stepper>

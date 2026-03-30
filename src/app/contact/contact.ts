@@ -8,6 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatStepperModule } from '@angular/material/stepper';
+import { ContactService } from '../contact-service';
 import formData from './form-data.json';
 
 export type FeetInches =
@@ -72,8 +73,8 @@ export function dimensionValidator(opts: { minFeet: number; maxFeet: number; max
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Contact {
-
-    private readonly breakpoints = inject(BreakpointObserver);
+  public contactService = inject(ContactService);
+  private readonly breakpoints = inject(BreakpointObserver);
 
   private readonly isMobile = toSignal(
     this.breakpoints
@@ -98,12 +99,10 @@ export class Contact {
   constructor(private fb: FormBuilder) {
     this.intakeForm = this.fb.group({
       project: this.fb.group({
-      submitDate: new FormControl(Date.now(), [Validators.required]),
-      buildType: new FormControl('', [Validators.required]),
-      role: new FormControl(''),
-      buildStage: new FormControl('', [Validators.required]),
-      projectStage: new FormControl('', [Validators.required]),
-      drawings: new FormControl('', [Validators.required]),
+        submitDate: new FormControl(Date.now(), [Validators.required]),
+        buildType: new FormControl('', [Validators.required]),
+        projectStage: new FormControl('', [Validators.required]),
+        drawings: new FormControl('', [Validators.required]),
       }),
       building: this.fb.group({
         buildingWidth: new FormControl('', [Validators.required, dimensionValidator({ minFeet: 10, maxFeet: 1000 })]),
@@ -112,19 +111,18 @@ export class Contact {
         roofPitch: new FormControl('', [Validators.required]),
         budget: new FormControl('', [Validators.required]),
         timeline: new FormControl('', [Validators.required]),
-        assistance: new FormControl('', [Validators.required]),
-              buildingCity: new FormControl('', [Validators.required]),
-      buildingState: new FormControl('', [Validators.required]),
-      buildingZip: new FormControl('', [Validators.required]),
+        buildingCity: new FormControl('', [Validators.required]),
+        buildingState: new FormControl('', [Validators.required]),
+        buildingZip: new FormControl('', [Validators.required]),
       }),
       personal: this.fb.group({
-      firstName: new FormControl('', [Validators.required]),
-      lastName: new FormControl('', [Validators.required]),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      phone: new FormControl('', [Validators.required]),
-      industry: new FormControl('', [Validators.required]),
-      feedback: new FormControl('', [Validators.required]),
-      notes: new FormControl(''),
+        firstName: new FormControl('', [Validators.required]),
+        lastName: new FormControl('', [Validators.required]),
+        email: new FormControl('', [Validators.required, Validators.email]),
+        phone: new FormControl('', [Validators.required]),
+        industry: new FormControl('', [Validators.required]),
+        feedback: new FormControl('', [Validators.required]),
+        notes: new FormControl(''),
       })
     })
   }
@@ -162,6 +160,17 @@ export class Contact {
       default:
         return 'Invalid value.';
     }
+  }
+
+  async submit(form: FormGroup): Promise<void> {
+    console.log("submit", form.value);
+    if (form.invalid) {
+      this.intakeForm.markAllAsTouched();
+      return;
+    }
+
+    const payload = this.intakeForm.getRawValue();
+    await this.contactService.submit(payload);
   }
 
 }
