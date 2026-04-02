@@ -40,30 +40,30 @@
             <mat-step formGroupName="building" [stepControl]="intakeForm.get(['building'])!">
                 <ng-template matStepLabel>Building Information</ng-template>
                 <div class="step">
-                        <mat-form-field>
-                            <mat-label>Building Width</mat-label>
-                            <input matInput required formControlName="buildingWidth" type="number" />
-                        </mat-form-field>
-                        <mat-form-field>
-                            <mat-label>Building Length</mat-label>
-                            <input matInput required formControlName="buildingLength" type="number" />
-                        </mat-form-field>
-                        <mat-form-field>
-                            <mat-label>Wall Height</mat-label>
-                            <input matInput required formControlName="wallHeight" type="number" />
-                        </mat-form-field>
-                        <mat-form-field>
-                            <mat-label>City</mat-label>
-                            <input matInput required formControlName="buildingCity" />
-                        </mat-form-field>
-                        <mat-form-field>
-                            <mat-label>State</mat-label>
-                            <input matInput required formControlName="buildingState" />
-                        </mat-form-field>
-                        <mat-form-field>
-                            <mat-label>Zipcode</mat-label>
-                            <input matInput required formControlName="buildingZip"  type="number" />
-                        </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Building Width</mat-label>
+                        <input matInput required formControlName="buildingWidth" type="number" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Building Length</mat-label>
+                        <input matInput required formControlName="buildingLength" type="number" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Wall Height</mat-label>
+                        <input matInput required formControlName="wallHeight" type="number" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>City</mat-label>
+                        <input matInput required formControlName="buildingCity" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>State</mat-label>
+                        <input matInput required formControlName="buildingState" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Zipcode</mat-label>
+                        <input matInput required formControlName="buildingZip" type="number" />
+                    </mat-form-field>
                     <mat-form-field>
                         <mat-label>Roof Pitch</mat-label>
                         <mat-select formControlName="roofPitch">
@@ -95,22 +95,22 @@
             <mat-step formGroupName="personal" [stepControl]="intakeForm.get(['personal'])!">
                 <ng-template matStepLabel>Personal Information</ng-template>
                 <div class="step">
-                        <mat-form-field>
-                            <mat-label>First Name</mat-label>
-                            <input matInput required formControlName="firstName" />
-                        </mat-form-field>
-                        <mat-form-field>
-                            <mat-label>Last Name</mat-label>
-                            <input matInput required formControlName="lastName" />
-                        </mat-form-field>
-                        <mat-form-field>
-                            <mat-label>Email</mat-label>
-                            <input matInput required formControlName="email" type="email" />
-                        </mat-form-field>
-                        <mat-form-field>
-                            <mat-label>Phone</mat-label>
-                            <input matInput required formControlName="phone" type="number" />
-                        </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>First Name</mat-label>
+                        <input matInput required formControlName="firstName" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Last Name</mat-label>
+                        <input matInput required formControlName="lastName" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Email</mat-label>
+                        <input matInput required formControlName="email" type="email" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Phone</mat-label>
+                        <input matInput required formControlName="phone" type="number" />
+                    </mat-form-field>
                     <mat-form-field>
                         <mat-label>What industry is your project for?</mat-label>
                         <mat-select formControlName="industry">
@@ -131,8 +131,26 @@
                         <mat-label>Additional Information</mat-label>
                         <textarea matInput formControlName="notes"></textarea>
                     </mat-form-field>
+
+                    @if (submitAttempted && intakeForm.invalid) {
+                    <div class="submit-error-summary" role="alert" aria-live="polite">
+                        <p>Please correct the following fields before submitting:</p>
+                        <ul>
+                            @for (field of invalidFieldLabels; track field) {
+                            <li>{{ field }}</li>
+                            }
+                        </ul>
+                    </div>
+                    }
                     <button class="outline" matButton matStepperPrevious type="button">Back</button>
-                    <button (click)="submit(intakeForm)" class="primary" matButton type="submit">Submit</button>
+                    <button (click)="submit(intakeForm)" class="primary hello" matButton type="button">
+                        Submit
+                    </button>
+                                        @if (showSuccess) {
+                    <div class="submit-success" role="status" aria-live="polite">
+                        Thank you for reaching out. We’ll be in touch soon.
+                    </div>
+                    }
                 </div>
             </mat-step>
         </mat-stepper>

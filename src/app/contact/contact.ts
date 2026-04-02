@@ -127,6 +127,53 @@ export class Contact {
     })
   }
 
+  submitAttempted = false;
+  showSuccess = false;
+
+private readonly fieldLabels: Record<string, string> = {
+  'project.buildType': 'Build Type',
+  'project.projectStage': 'Project Stage',
+  'project.drawings': 'Drawings',
+  'building.buildingWidth': 'Building Width',
+  'building.buildingLength': 'Building Length',
+  'building.wallHeight': 'Wall Height',
+  'building.roofPitch': 'Roof Pitch',
+  'building.budget': 'Budget',
+  'building.timeline': 'Timeline',
+  'building.buildingCity': 'City',
+  'building.buildingState': 'State',
+  'building.buildingZip': 'Zipcode',
+  'personal.firstName': 'First Name',
+  'personal.lastName': 'Last Name',
+  'personal.email': 'Email',
+  'personal.phone': 'Phone',
+  'personal.industry': 'Industry',
+  'personal.feedback': 'Where Did You Hear About Us',
+};
+
+get showSubmitError(): boolean {
+  return this.intakeForm.invalid && (this.submitAttempted || this.intakeForm.touched);
+}
+
+get invalidFieldLabels(): string[] {
+  if (!this.showSubmitError) return [];
+
+  const labels = this.collectInvalidFieldLabels(this.intakeForm);
+  return [...new Set(labels)];
+}
+
+private collectInvalidFieldLabels(control: AbstractControl, path = ''): string[] {
+  if (control instanceof FormGroup) {
+    return Object.keys(control.controls).flatMap((key) => {
+      const child = control.controls[key];
+      const childPath = path ? `${path}.${key}` : key;
+      return this.collectInvalidFieldLabels(child, childPath);
+    });
+  }
+
+  return control.invalid ? [this.fieldLabels[path] ?? path] : [];
+}
+
   normalizeOnBlur(control: AbstractControl): void {
     const raw = String(control.value ?? '').trim();
     if (!raw) return;
@@ -162,15 +209,28 @@ export class Contact {
     }
   }
 
-  async submit(form: FormGroup): Promise<void> {
-    console.log("submit", form.value);
-    if (form.invalid) {
-      this.intakeForm.markAllAsTouched();
-      return;
-    }
+async submit(form: FormGroup): Promise<void> {
+  this.submitAttempted = true;
 
-    const payload = this.intakeForm.getRawValue();
-    await this.contactService.submit(payload);
+  if (form.invalid) {
+    this.intakeForm.markAllAsTouched();
+    return;
   }
+
+  const payload = this.intakeForm.getRawValue();
+  await this.contactService.submit(payload);
+
+  // success state
+  this.showSuccess = true;
+
+  // optionally reset form (recommended)
+  this.intakeForm.reset();
+  this.submitAttempted = false;
+
+  // auto-hide after 3 seconds
+  setTimeout(() => {
+    this.showSuccess = false;
+  }, 3000);
+}
 
 }

@@ -22,7 +22,7 @@
     <h2>Cold Formed Buildings | Made in USA</h2>
     <div class="cards">
         @for (data of differences; track $index) {
-        <mat-card appearance="outlined">
+        <mat-card style="cursor: pointer;" appearance="outlined" (click)="contactButtonClicked()">
             <img [style]="data.style" class="diff" mat-card-image [src]="data?.image">
             <mat-card-content>
                 <mat-card-title>{{ data.title }}</mat-card-title>
@@ -38,7 +38,7 @@
         <app-carousel type="architecture"></app-carousel>
     </div>
     <div class="group">
-        <h2>Browse our Floor Plans</h2>
+        <h2>Browse Floor Plans</h2>
         <app-carousel type="floorPlans"></app-carousel>
     </div>
 </div>
