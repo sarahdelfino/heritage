@@ -127,5 +127,41 @@
                 }
             ]
         }
+    ],
+    "faq": [
+        {
+            "title": "What is the benefit of steel over other building materials?",
+            "description": "Steel surpasses many other building materials with its exceptional strength, durability and versatility. Its robust nature allows it to withstand heavy loads and provide structural stability while remaining resistant to pests, fire, wind, rain and snow. The flexibility of steel enables designers and builders to easily adapt to specific project requirements. Furthermore, steel's recyclability at the end of its life cycle contributes to a more sustainable construction industry. In short, steel offers enduring strength, unmatched durability, design adaptability and tangible environmental benefits, making it an excellent choice for construction projects."
+        },
+        {
+            "title": "Are steel buildings able to withstand extreme weather?",
+            "description": "Yes. When designed and constructed properly, steel can resist high winds, heavy snow loads, earthquakes and even hurricanes. The inherent strength and structural integrity of steel make it a reliable choice for buildings in areas prone to severe weather events. Additionally, steel buildings can be engineered to incorporate specific design features and reinforcement to enhance their resilience to extreme weather."
+        },
+        {
+            "title": "Are cold-formed steel buildings as strong as other steel buildings?",
+            "description": "Cold-formed steel buildings are just as strong as other steel buildings when designed and constructed properly. With proper engineering and adherence to building codes and standards, cold-formed steel buildings can meet the required strength and structural performance criteria for a wide range of applications. In our case, Heritage Steel buildings are specially engineered to be highly durable and easy to design, order and install."
+        },
+        {
+            "title": "How long do steel buildings typically last?",
+            "description": "With proper maintenance, steel buildings can last for decades. The life span ultimately depends on various factors, including the quality of materials, construction techniques, climate conditions and maintenance. Using high-quality steel and protective coatings as well as conducting regular inspections and maintenance can help ensure the longevity and durability of a steel building."
+        },
+        {
+            "title": "Which tools or equipment are needed to erect a Heritage Steel building?",
+            "description": "Erecting a Heritage Steel cold-formed building typically requires power tools like drills and impact drivers, hand tools like wrenches and hammers, cutting tools for metal components, ladders or scaffolding for access and safety equipment such as hard hats and gloves. Depending on size, you may also require lift and hoisting equipment."
+        },
+        {
+            "title": "Are steel buildings energy efficient?",
+            "description": "Steel buildings can become energy efficient by incorporating insulation, cool roof coatings, efficient HVAC systems and lighting as well as a well-designed building envelope. These and other measures can help reduce heat transfer, lower cooling and lighting loads and minimize energy consumption."
+        },
+        {
+            "title": "Where can Heritage Steel buildings be shipped to?",
+            "description": "We have the footprint to ship our products anywhere across North America. As a leading manufacturer and supplier of building products, we have a widespread distribution network that allows us to serve customers in numerous regions."
+        },
+        {
+            "title": "What colors are available for a Heritage Steel building?",
+            "description": "Heritage Steel buildings are available in a wide range of standard color options to match your preferences and project requirements. From neutral tones to more distinctive finishes, our color selections are designed to provide both durability and visual appeal. For a complete overview of available colors and combinations, we recommend downloading our color chart by clicking the image below.",
+            "image": "color-chart.png",
+            "url": "Heritage-Color-Chart.pdf"
+        }
     ]
 }

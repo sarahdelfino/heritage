@@ -1,0 +1,17 @@
+@for (q of faq; track $index) {
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>{{ q.title }}</mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <p>{{ q.description }}</p>
+
+    @if (q.url) {
+      <a [href]="q.url" target="_blank">
+        @if (q.image) {
+          <img [src]="q.image" alt="">
+        }
+      </a>
+    }
+  </mat-expansion-panel>
+}

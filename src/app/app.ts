@@ -5,10 +5,11 @@ import content from "./content.json";
 import { ViewportScroller } from '@angular/common';
 import { Contact } from "./contact/contact";
 import { Carousel } from "./carousel/carousel";
+import { Faq } from "./faq/faq";
 
 @Component({
   selector: 'app-root',
-  imports: [MatCardModule, RouterLink, Contact, Carousel],
+  imports: [MatCardModule, RouterLink, Contact, Carousel, Faq],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
