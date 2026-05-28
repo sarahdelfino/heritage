@@ -119,11 +119,17 @@
             "title": "Contact",
             "links": [
                 {
-                    "name": "(843) 867-5309"
+                    "name": "(864) 202-6342"
                 },
                 {
-                    "name": "info@heritagesteelbuildings.com",
-                    "link": "mailto:info@heritagesteelbuildings.com"
+                    "name": "sales@heritagesteelbuilds.com",
+                    "link": "mailto:sales@heritagesteelbuilds.com"
+                },
+                {
+                    "name": "P.O. Box #4"
+                },
+                {
+                    "name": "Reidville SC, 29375"
                 }
             ]
         }
