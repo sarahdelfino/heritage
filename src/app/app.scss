@@ -36,7 +36,7 @@ img.logo{
   width: auto;
 }
 
-button.design-btn {
+button.design-btn, a.btn.design-btn {
   width: fit-content;
 }
 
@@ -53,7 +53,7 @@ img.frame {
   margin: auto;
 }
 
-.nav-container > button.secondary {
+.nav-container > button.secondary, a.btn.secondary {
     padding: 8px;
     font-size: 0.8em;
 }
@@ -62,7 +62,7 @@ img.frame {
     .nav-container {
         padding: 0px 20px;
     }
-    .nav-container > button.secondary {
+    .nav-container > button.secondary, a.btn.secondary {
         font-size: 1em;
             padding: 8px 24px;
     }

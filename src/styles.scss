@@ -47,7 +47,14 @@ body {
   background-color: #e4e4e4;
 }
 
-button {
+a.btn {
+  text-decoration: none;
+  margin: 0px !important;
+  width: fit-content;
+  font-size: 1rem;
+}
+
+button, .btn {
   width: 224px;
   padding: 12px 24px;
   color: white;
@@ -61,6 +68,15 @@ button {
   &:hover {
     transform: translateY(-1px);
     cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  a.btn {
+    padding: 4px 8px;
+    font-size: 0.85rem;
+    position: relative;
+    top: 10px;
   }
 }
 

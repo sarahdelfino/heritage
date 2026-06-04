@@ -107,7 +107,7 @@ export class Contact {
       building: this.fb.group({
         buildingWidth: new FormControl('', [Validators.required, dimensionValidator({ minFeet: 10, maxFeet: 1000 })]),
         buildingLength: new FormControl('', [Validators.required, dimensionValidator({ minFeet: 10, maxFeet: 1000 })]),
-        wallHeight: new FormControl('', [Validators.required, dimensionValidator({ minFeet: 8, maxFeet: 40 })]),
+        wallHeight: new FormControl('', [Validators.required, dimensionValidator({ minFeet: 0, maxFeet: 100 })]),
         roofPitch: new FormControl('', [Validators.required]),
         budget: new FormControl('', [Validators.required]),
         timeline: new FormControl('', [Validators.required]),
@@ -216,15 +216,18 @@ async submit(form: FormGroup): Promise<void> {
     this.intakeForm.markAllAsTouched();
     return;
   }
-
-  const payload = this.intakeForm.getRawValue();
-  await this.contactService.submit(payload);
-
-  // success state
   this.showSuccess = true;
 
-  // optionally reset form (recommended)
-  this.intakeForm.reset();
+  const payload = this.intakeForm.getRawValue();
+  await this.contactService.submit(payload).then(() => {
+    console.log('Submission successful');
+    this.showSuccess = true;
+  }).catch((error) => {
+    console.error('Submission error:', error);
+    this.errorText = 'An error occurred while submitting. Please try again later.';
+  });
+
+  this.intakeForm.reset(); 
   this.submitAttempted = false;
 
   // auto-hide after 3 seconds
