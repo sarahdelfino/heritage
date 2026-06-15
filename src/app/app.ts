@@ -35,4 +35,11 @@ export class App {
       }, 200);
     }
   }
+
+  floatingButtonClicked(): void {
+    this.bottomContactVisible = true;
+          setTimeout(() => {
+        this.scroller.scrollToAnchor('intakeForm', { behavior: 'smooth' });
+      }, 200);
+  }
 }

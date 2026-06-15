@@ -1,18 +1,20 @@
 /* =========================
    Base tokens + helpers
    ========================= */
-:root{
+:root {
   --max: 1200px;
   --pad: clamp(16px, 4vw, 32px);
   --radius: 16px;
-  --border: rgba(0,0,0,.12);
-  --shadow: 0 18px 40px rgba(0,0,0,.18);
+  --border: rgba(0, 0, 0, .12);
+  --shadow: 0 18px 40px rgba(0, 0, 0, .18);
   --maroon: #500909;
 }
 
-*{ box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-body{
+body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: #111;
@@ -21,7 +23,7 @@ body{
 /* =========================
    Nav
    ========================= */
-.nav-container{
+.nav-container {
   height: 80px;
   display: flex;
   align-items: center;
@@ -30,13 +32,14 @@ body{
   background: #e4e4e4;
 }
 
-img.logo{
+img.logo {
   height: 56px;
   max-height: 56px;
   width: auto;
 }
 
-button.design-btn, a.btn.design-btn {
+button.design-btn,
+a.btn.design-btn {
   width: fit-content;
 }
 
@@ -53,25 +56,29 @@ img.frame {
   margin: auto;
 }
 
-.nav-container > button.secondary, a.btn.secondary {
-    padding: 8px;
-    font-size: 0.8em;
+.nav-container>button.secondary,
+a.btn.secondary {
+  padding: 8px;
+  font-size: 0.8em;
 }
 
 @media screen and (min-width: 600px) {
-    .nav-container {
-        padding: 0px 20px;
-    }
-    .nav-container > button.secondary, a.btn.secondary {
-        font-size: 1em;
-            padding: 8px 24px;
-    }
+  .nav-container {
+    padding: 0px 20px;
+  }
+
+  .nav-container>button.secondary,
+  a.btn.secondary {
+    font-size: 1em;
+    padding: 8px 24px;
+  }
 }
+
 
 /* =========================
    Hero video
    ========================= */
-.video-container{
+.video-container {
   width: 100%;
   max-width: var(--max);
   aspect-ratio: 16 / 7;
@@ -82,22 +89,52 @@ img.frame {
   box-shadow: var(--shadow);
 }
 
-.video-container video{
+.floating-container {
+  position: fixed;
+  bottom: 100px;
+  right: 18px;
+  width: 250px;
+  height: 150px;
+  background-image: url('/America250.png');
+  background-color: rgba(255, 255, 255, 0.3);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 9999999;
+}
+
+.floating-container:hover {
+  .floating-popup {
+    display: block;
+  }
+}
+
+.floating-popup {
+  display: none;
+  position: absolute;
+  top: -100px;
+  width: 250px;
+  background-color: rgba(80, 9, 9, 0.9);
+  color: white;
+  padding: 16px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.video-container video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.video-overlay{
+.video-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(0,0,0,.40) 0%,
-    rgba(0,0,0,.18) 45%,
-    rgba(0,0,0,.03) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(0, 0, 0, .40) 0%,
+      rgba(0, 0, 0, .18) 45%,
+      rgba(0, 0, 0, .03) 100%);
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -105,7 +142,7 @@ img.frame {
 }
 
 
-.overlay-text{
+.overlay-text {
   padding: clamp(20px, 5vw, 56px);
   text-align: center;
   // max-width: 680px;
@@ -115,7 +152,7 @@ img.frame {
   transform: translate(-50%, -50%);
 }
 
-.header-title{
+.header-title {
   margin: 0 0 12px;
   text-transform: uppercase;
   letter-spacing: .04em;
@@ -123,11 +160,11 @@ img.frame {
   font-size: clamp(32px, 4vw, 58px);
 }
 
-.header-subtitle{
+.header-subtitle {
   margin: 0 0 22px;
   line-height: 1.45;
   font-size: clamp(16px, 1.6vw, 20px);
-  color: rgba(255,255,255,.92);
+  color: rgba(255, 255, 255, .92);
 }
 
 .buttons {
@@ -137,10 +174,11 @@ img.frame {
   flex-wrap: wrap;
   margin: auto;
 }
+
 /* =========================
    Cards section
    ========================= */
-.section{
+.section {
   max-width: 1200px;
   margin: 20px auto;
   padding: 10px;
@@ -150,30 +188,28 @@ div.section.carousels {
   padding: 0px;
 }
 
-.overlay3d{
+.overlay3d {
   position: absolute;
   inset: 0;
-background: linear-gradient(
-  180deg,
-  rgba(0,0,0,.75) 0%,
-  rgba(0,0,0,.55) 40%,
-  rgba(0,0,0,.35) 75%,
-  rgba(0,0,0,.15) 100%
-);
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, .75) 0%,
+      rgba(0, 0, 0, .55) 40%,
+      rgba(0, 0, 0, .35) 75%,
+      rgba(0, 0, 0, .15) 100%);
   display: flex;
   align-items: center;
   justify-content: flex-start;
   text-align: left;
 }
 
-.overlay3d-container{
+.overlay3d-container {
   position: relative;
   color: white;
   max-width: 1200px;
   margin: 40px auto;
 }
 
-.overlay3d-container img{
+.overlay3d-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -182,7 +218,7 @@ background: linear-gradient(
   overflow: hidden;
 }
 
-.overlay3d-text{
+.overlay3d-text {
   padding: clamp(20px, 5vw, 56px);
   text-align: left;
   position: absolute;
@@ -201,7 +237,7 @@ background: linear-gradient(
   padding: 20px;
 }
 
-.cards{
+.cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -218,6 +254,7 @@ background: linear-gradient(
   mat-card {
     width: 100% !important;
   }
+
   .overlay3d-text {
     left: 50%;
     top: 50%;
@@ -226,10 +263,12 @@ background: linear-gradient(
     width: 100%;
     text-align: center;
   }
+
   .overlay3d-text h1 {
     font-size: 1.75rem;
     margin: 0px;
   }
+
   .overlay3d-text button.primary {
     width: 80%;
     margin-top: 16px;
@@ -237,30 +276,30 @@ background: linear-gradient(
 }
 
 /* mat-card is a real element selector, so this is safe */
-mat-card{
+mat-card {
   width: 270px;
   border-radius: var(--radius) !important;
   overflow: hidden;
   transition: transform .15s ease, box-shadow .15s ease;
 }
 
-mat-card:hover{
+mat-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 16px 34px rgba(0,0,0,.14);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, .14);
 }
 
-mat-card img{
+mat-card img {
   object-fit: cover;
   object-position: 10% 40%;
   height: 200px;
   width: 100%;
 }
 
-mat-card-content{
+mat-card-content {
   padding: 16px 18px 18px;
 }
 
-mat-card-title{
+mat-card-title {
   font-weight: 750;
   letter-spacing: .01em;
 }
@@ -270,7 +309,7 @@ mat-card-title{
   justify-content: space-evenly;
 }
 
-div.categories > img {
+div.categories>img {
   max-width: 30vw;
 }
 
@@ -278,13 +317,15 @@ div.categories > img {
    Process section
    ========================= */
 
-.section h2, .carousels h2, .comp-section h2{
+.section h2,
+.carousels h2,
+.comp-section h2 {
   font-size: clamp(24px, 3vw, 34px);
 }
 
-.process-subtitle{
+.process-subtitle {
   margin: 10px 0 26px;
-  color: rgba(0,0,0,.65);
+  color: rgba(0, 0, 0, .65);
 }
 
 .group {
@@ -293,7 +334,7 @@ div.categories > img {
   text-align: center;
 }
 
-.steps{
+.steps {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 16px;
@@ -308,16 +349,16 @@ div.categories > img {
 }
 
 img.process-icon {
-    width: 48px;
+  width: 48px;
 }
 
-.step h3{
+.step h3 {
   margin: 0 0 8px;
   font-weight: 750;
 }
 
-.step-desc{
-  color: rgba(0,0,0,.72);
+.step-desc {
+  color: rgba(0, 0, 0, .72);
   line-height: 1.45;
 }
 
@@ -326,18 +367,24 @@ img.impact {
   margin-top: 24px;
 }
 
-@media (max-width: 900px){
-  .step{ grid-column: span 6; }
+@media (max-width: 900px) {
+  .step {
+    grid-column: span 6;
+  }
 }
-@media (max-width: 560px){
-  .step{ grid-column: span 12; }
+
+@media (max-width: 560px) {
+  .step {
+    grid-column: span 12;
+  }
 }
 
 /* =========================
    CTA section
    ========================= */
-.cta{
-  background-color: #500909;   /* solid maroon, no gradient */
+.cta {
+  background-color: #500909;
+  /* solid maroon, no gradient */
   background-image: none !important;
   color: #fff;
   padding: 70px 0;
@@ -345,20 +392,20 @@ img.impact {
 }
 
 
-.cta-text{
+.cta-text {
   max-width: 760px;
   margin: 0 auto;
   padding: 0 var(--pad);
 }
 
-.cta-title{
+.cta-title {
   margin: 0 0 10px;
   font-size: clamp(26px, 3.2vw, 40px);
 }
 
-.cta-subtitle{
+.cta-subtitle {
   margin: 0 0 22px;
-  color: rgba(255,255,255,.92);
+  color: rgba(255, 255, 255, .92);
   line-height: 1.5;
 }
 
@@ -367,49 +414,72 @@ img.impact {
    ========================= */
 
 /* Prevent accidental horizontal scroll */
-html, body { overflow-x: hidden; } 
+html,
+body {
+  overflow-x: hidden;
+}
 
-@media (max-width: 640px){
+@media (max-width: 640px) {
+
+  .floating-container {
+    width: 40vw;
+    height: 100px;
+    top: 10%;
+    left: unset;
+    right: 60vw;
+    background-color: rgba(255, 255, 255, 0.9);
+
+  }
+
+  .floating-popup {
+    display: unset;
+    right: 0;
+    left: 40vw;
+    top: unset;
+    width: 60vw;
+    height: 100px;
+    padding: 8px;
+  }
 
   /* Nav: shorter and more compact */
-  .nav-container{
+  .nav-container {
     height: 64px;
     padding: 0 8px;
   }
-  img.logo{
+
+  img.logo {
     height: 44px;
     max-height: 44px;
   }
 
   /* Hero: taller, centered text, stronger overlay */
-  .video-container{
-    margin-top:0px;
-    aspect-ratio: 4 / 5; /* key change: gives text room */
+  .video-container {
+    margin-top: 0px;
+    aspect-ratio: 4 / 5;
+    /* key change: gives text room */
   }
 
-  .video-overlay{
+  .video-overlay {
     justify-content: center;
     text-align: center;
-    background: linear-gradient(
-      180deg,
-      rgba(0,0,0,.70) 0%,
-      rgba(0,0,0,.55) 55%,
-      rgba(0,0,0,.35) 100%
-    );
+    background: linear-gradient(180deg,
+        rgba(0, 0, 0, .70) 0%,
+        rgba(0, 0, 0, .55) 55%,
+        rgba(0, 0, 0, .35) 100%);
   }
 
-  .overlay-text{
+  .overlay-text {
     max-width: 520px;
     padding: 20px 18px;
   }
 
-  .header-title{
+  .header-title {
     font-size: clamp(26px, 7vw, 36px);
     letter-spacing: .03em;
     line-height: 1.08;
   }
 
-  .header-subtitle{
+  .header-subtitle {
     font-size: 16px;
     line-height: 1.45;
     margin-bottom: 16px;
@@ -420,65 +490,68 @@ html, body { overflow-x: hidden; }
   }
 
   /* Sections: reduce padding so it breathes */
-  .cards-section{
+  .cards-section {
     padding: 36px 16px;
   }
-  .process-section{
+
+  .process-section {
     padding: 44px 16px;
   }
 
   /* Cards: slightly smaller image height */
-  mat-card img{
+  mat-card img {
     height: 190px;
   }
 
   /* CTA: stack buttons + remove inline margin-right impact */
-  .cta{
+  .cta {
     padding: 56px 0;
   }
 
-  .cta-text{
+  .cta-text {
     padding: 0 16px;
   }
 
   .cta .secondary,
-  .cta .primary{
+  .cta .primary {
     width: 100%;
     max-width: 360px;
     display: block;
-    margin: 10px auto 0 !important; /* overrides your inline style */
+    margin: 10px auto 0 !important;
+    /* overrides your inline style */
   }
 }
 
 .footer-container {
-    padding: 2em;
-    border-top: 1px solid #500909;
+  padding: 2em;
+  border-top: 1px solid #500909;
 }
 
 .footer-section-container {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 960px;
-    margin: 24px auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 960px;
+  margin: 24px auto;
 }
 
 .footer-section {
-    margin-right: 24px;
+  margin-right: 24px;
 }
 
 p.footer-title {
-    font-weight: bold;
-    font-size: 1.1em;
-    text-transform: uppercase;
-    margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
 }
 
-div.footer-text > p, a {
-    margin: 0px auto 4px;
+div.footer-text>p,
+a {
+  margin: 0px auto 4px;
 }
 
 div.footer-text {
-    color: gray;
+  color: gray;
 }
 
 #intakeForm {
