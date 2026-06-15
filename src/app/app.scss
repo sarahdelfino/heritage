@@ -91,12 +91,11 @@ a.btn.secondary {
 
 .floating-container {
   position: fixed;
-  bottom: 100px;
+  top: 75vh;
   right: 18px;
   width: 250px;
   height: 150px;
   background-image: url('/America250.png');
-  background-color: rgba(255, 255, 255, 0.3);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
