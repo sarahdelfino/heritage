@@ -10,6 +10,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatStepperModule } from '@angular/material/stepper';
 import { ContactService } from '../contact-service';
 import formData from './form-data.json';
+import { analytics } from '../firebase.config';
+import { logEvent } from 'firebase/analytics';
 
 export type FeetInches =
   | { ok: true; totalInches: number; normalized: string }
@@ -213,10 +215,12 @@ async submit(form: FormGroup): Promise<void> {
   this.submitAttempted = true;
 
   if (form.invalid) {
+    logEvent(analytics, 'contact_form_error', { fields: this.invalidFieldLabels.join(', ') });
     this.intakeForm.markAllAsTouched();
     return;
   }
   this.showSuccess = true;
+  logEvent(analytics, 'quote_form_submitted');
 
   const payload = this.intakeForm.getRawValue();
   await this.contactService.submit(payload).then(() => {

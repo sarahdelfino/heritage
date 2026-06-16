@@ -2,7 +2,7 @@
         <p-carousel class="gold-carousel" [value]="images()" [numVisible]="1" [numScroll]="1" circular="true"
                 autoplayInterval="3000">
                 <ng-template let-img #item>
-                        <a href="/floorplans.pdf" target="_blank">
+                        <a href="/floorplans.pdf" target="_blank" (click)="carouselClicked(`carousel_image_${img.id}_clicked`)">
                                 <img id="{{ img.id + '_' + type}}" [src]="img.image">
                         </a>
                 </ng-template>

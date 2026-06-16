@@ -1,5 +1,5 @@
 @for (q of faq; track $index) {
-  <mat-expansion-panel>
+  <mat-expansion-panel  (click)="faqClicked(`faq_${$index}_clicked`)">
     <mat-expansion-panel-header>
       <mat-panel-title>{{ q.title }}</mat-panel-title>
     </mat-expansion-panel-header>

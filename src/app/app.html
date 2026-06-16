@@ -1,6 +1,6 @@
 <div class="nav-container">
     <img class="logo" src="HSB-nobg.png">
-    <a class="btn secondary" href="https://heritage3d.actbuildingsystems.com" target="_blank">
+    <a class="btn secondary" href="https://heritage3d.actbuildingsystems.com" target="_blank" (click)="designButtonClicked()">
         Go To Online Designer
     </a>
 
@@ -16,7 +16,7 @@
             <p class="header-subtitle">Design | Architectural & Engineering | Fabrication | Delivery | Installation
             </p>
             <div class="buttons">
-                <button class="primary" (click)="contactButtonClicked()">Get a Quote</button>
+                <button class="primary" (click)="contactButtonClicked('top_quote')">Get a Quote</button>
             </div>
         </div>
     </div>
@@ -31,7 +31,7 @@
     <h2>Cold Formed Buildings | Made in USA</h2>
     <div class="cards">
         @for (data of differences; track $index) {
-        <mat-card style="cursor: pointer;" appearance="outlined" (click)="contactButtonClicked()">
+        <mat-card style="cursor: pointer;" appearance="outlined" (click)="contactButtonClicked('card_' + $index)">
             <img [style]="data.style" class="diff" mat-card-image [src]="data?.image">
             <mat-card-content>
                 <mat-card-title>{{ data.title }}</mat-card-title>
@@ -74,7 +74,7 @@
         <h1 class="cta-title">Ready to get started?</h1>
         <p class="cta-subtitle">Get a free consultation and detailed quote for your metal building project. Our team is
             ready to bring your vision to life.</p>
-        <button (click)="contactButtonClicked()" class="secondary" style="margin-right: 10px;">Request a Quote</button>
+        <button (click)="contactButtonClicked('bottom_quote')" class="secondary" style="margin-right: 10px;">Request a Quote</button>
     </div>
 </div>
 @if (bottomContactVisible) {
@@ -91,7 +91,7 @@
             <p class="footer-title">{{ section.title }}</p>
             @for (link of section.links; track $index) {
             <div class="footer-text">
-                <p [routerLink]="link?.link">{{ link.name }}</p>
+                <p [routerLink]="link?.link" (click)="footerButtonClicked(`footer_${$index}_clicked`)">{{ link.name }}</p>
             </div>
             }
         </div>
