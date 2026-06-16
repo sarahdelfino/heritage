@@ -71,15 +71,6 @@ button, .btn {
   }
 }
 
-@media screen and (max-width: 600px) {
-  a.btn {
-    padding: 4px 8px;
-    font-size: 0.85rem;
-    position: relative;
-    top: 10px;
-  }
-}
-
 .primary {
   background-color: #500909;
   border: 2px solid #500909;

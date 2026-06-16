@@ -421,23 +421,24 @@ body {
 @media (max-width: 640px) {
 
   .floating-container {
-    width: 40vw;
-    height: 100px;
-    top: 10%;
-    left: unset;
-    right: 60vw;
-    background-color: rgba(255, 255, 255, 0.9);
+    display: none;
+    // width: 40vw;
+    // height: 100px;
+    // top: 10%;
+    // left: unset;
+    // right: 60vw;
+    // background-color: rgba(255, 255, 255, 0.9);
 
   }
 
   .floating-popup {
-    display: unset;
-    right: 0;
-    left: 40vw;
-    top: unset;
-    width: 60vw;
-    height: 100px;
-    padding: 8px;
+    // display: unset;
+    // right: 0;
+    // left: 40vw;
+    // top: unset;
+    // width: 60vw;
+    // height: 100px;
+    // padding: 8px;
   }
 
   /* Nav: shorter and more compact */
