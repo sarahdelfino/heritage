@@ -1,88 +1,5 @@
-<div class="nav-container">
-    <img class="logo" src="HSB-nobg.png">
-    <a class="btn secondary" href="https://heritage3d.actbuildingsystems.com" target="_blank" (click)="designButtonClicked()">
-        Go To Online Designer
-    </a>
-
-</div>
-<div class="video-container">
-    <video autoplay loop muted playsinline preload="auto" [muted]="true">
-        <source src="/header.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-    </video>
-    <div class="video-overlay">
-        <div class="overlay-text">
-            <h1 class="header-title">Built to last generations</h1>
-            <p class="header-subtitle">Design | Architectural & Engineering | Fabrication | Delivery | Installation
-            </p>
-            <div class="buttons">
-                <button class="primary" (click)="contactButtonClicked('top_quote')">Get a Quote</button>
-            </div>
-        </div>
-    </div>
-    <div class="floating-container" (click)="floatingButtonClicked()">
-        <div class="floating-popup">
-            <p style="margin: 0px;">Type "AMERICA250" in the additional information on your quote request to claim a
-                $250 signing bonus.<br>June - September 2026</p>
-        </div>
-    </div>
-</div>
-<div class="section">
-    <h2>Cold Formed Buildings | Made in USA</h2>
-    <div class="cards">
-        @for (data of differences; track $index) {
-        <mat-card style="cursor: pointer;" appearance="outlined" (click)="contactButtonClicked('card_' + $index)">
-            <img [style]="data.style" class="diff" mat-card-image [src]="data?.image">
-            <mat-card-content>
-                <mat-card-title>{{ data.title }}</mat-card-title>
-                <p>{{ data.description }}</p>
-            </mat-card-content>
-        </mat-card>
-        }
-    </div>
-</div>
-<div class="carousels">
-    <div class="group">
-        <h2>Architecture Services Available</h2>
-        <app-carousel type="architecture"></app-carousel>
-    </div>
-    <div class="group">
-        <h2>Browse Floor Plans</h2>
-        <app-carousel type="floorPlans"></app-carousel>
-    </div>
-</div>
-<div class="section">
-    <h2>FAQ | Your Metal Building Questions Answered</h2>
-    <app-faq></app-faq>
-</div>
-<div class="comp-section">
-    <h2 style="max-width: 1300px; margin: auto auto 20px;">Precision Components | Ready in 3-5 weeks</h2>
-    <img class="frame" src="framing.png">
-</div>
-<div class="overlay3d-container">
-    <img src="3d.png">
-    <div class="overlay3d">
-        <div class="overlay3d-text">
-            <h1>Use our 3D configurator to create your design</h1>
-            <a class="btn primary" href="https://heritage3d.actbuildingsystems.com" target="_blank">Design your building
-                now</a>
-        </div>
-    </div>
-</div>
-<div class="cta">
-    <div class="cta-text">
-        <h1 class="cta-title">Ready to get started?</h1>
-        <p class="cta-subtitle">Get a free consultation and detailed quote for your metal building project. Our team is
-            ready to bring your vision to life.</p>
-        <button (click)="contactButtonClicked('bottom_quote')" class="secondary" style="margin-right: 10px;">Request a Quote</button>
-    </div>
-</div>
-@if (bottomContactVisible) {
-<div id="intakeForm" class="section">
-    <h2>Request a Quote</h2>
-    <app-contact></app-contact>
-</div>
-}
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
 <div class="footer-container">
     <img class="logo" src="HSB-nobg.png">
     <div class="footer-section-container">
@@ -91,7 +8,8 @@
             <p class="footer-title">{{ section.title }}</p>
             @for (link of section.links; track $index) {
             <div class="footer-text">
-                <p [routerLink]="link?.link" (click)="footerButtonClicked(`footer_${$index}_clicked`)">{{ link.name }}</p>
+                <p [routerLink]="link?.link" (click)="footerButtonClicked(`footer_${$index}_clicked`)">{{ link.name }}
+                </p>
             </div>
             }
         </div>

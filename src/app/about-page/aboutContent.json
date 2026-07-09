@@ -1,0 +1,86 @@
+{
+    "values": [
+        {
+            "title": "Practical Solutions",
+            "icon": "architecture",
+            "description": "Every recommendation starts with your goals, your property, and how the building will actually be used."
+        },
+        {
+            "title": "Clear Communication",
+            "icon": "forum",
+            "description": "Buying a steel building shouldn't feel confusing. We believe in straightforward conversations and realistic expectations."
+        },
+        {
+            "title": "Built for the Long Term",
+            "icon": "shield",
+            "description": "Durable materials, thoughtful engineering, and quality workmanship create buildings that continue serving their purpose for decades."
+        }
+    ],
+    "workStyle": [
+        "Help customers understand design, engineering, and installation considerations.",
+        "Provide support across building types, sizes, and intended uses.",
+        "Keep communication focused, practical, and easy to follow.",
+        "Build around the customer’s property, goals, budget, and timeline."
+    ],
+    "buildingUses": [
+        "Aircraft hangars",
+        "Commercial facilities",
+        "Agricultural buildings",
+        "Workshops",
+        "Garages",
+        "Residential steel buildings",
+        "Storage buildings",
+        "Equipment shelters"
+    ],
+    "faqs": [
+        {
+            "question": "What types of steel buildings does Heritage support?",
+            "answer": "Heritage supports a range of steel building projects, including commercial buildings, aircraft hangars, workshops, garages, agricultural buildings, and residential steel structures."
+        },
+        {
+            "question": "Do you help with design and engineering?",
+            "answer": "Yes. Heritage helps customers move from initial ideas into a practical building design and engineering path based on the property, intended use, and local requirements."
+        },
+        {
+            "question": "Do you offer installation?",
+            "answer": "Installation support may be available depending on the project location, building type, and scope. The best next step is to request a quote so the team can review your project details."
+        },
+        {
+            "question": "Can I customize my building?",
+            "answer": "Yes. Building dimensions, doors, windows, roof style, colors, insulation, and other details can often be customized around your needs."
+        }
+    ],
+    "steps": [
+  {
+    "number": "01",
+    "title": "Listen",
+    "description": "Every project starts with understanding your goals, property, timeline, and how the building will actually be used."
+  },
+  {
+    "number": "02",
+    "title": "Recommend",
+    "description": "Based on your needs, we help identify a building layout, dimensions, and features that make sense for your project."
+  },
+  {
+    "number": "03",
+    "title": "Engineer",
+    "description": "Plans are developed to meet applicable local building codes, site conditions, and engineering requirements."
+  },
+  {
+    "number": "04",
+    "title": "Fabricate",
+    "description": "Your building is manufactured using quality steel and prepared for delivery with precision and consistency."
+  },
+  {
+    "number": "05",
+    "title": "Deliver",
+    "description": "Building materials arrive on-site organized and ready for the next phase of construction."
+  },
+  {
+    "number": "06",
+    "title": "Build",
+    "description": "Your project moves from plans to a finished building designed to serve you for years."
+  }
+]
+    
+}

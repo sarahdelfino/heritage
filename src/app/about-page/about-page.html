@@ -1,0 +1,134 @@
+<section class="about-hero">
+    <div class="about-hero-copy">
+        <p class="eyebrow">About Heritage</p>
+        <h1>Steel building support from real people, not a catalog.</h1>
+        <p>
+            Heritage Steel Buildings helps customers plan, design, and build durable
+            steel structures with clear communication from the first conversation to
+            final installation.
+        </p>
+    </div>
+
+    <div class="about-hero-image">
+        <img src="/nate-johnston-consult.jpg" alt="Steel building exterior" />
+    </div>
+</section>
+
+<p class="eyebrow">Our Approach</p>
+<h2>Practical guidance from the first conversation.</h2>
+
+<p>
+    Every project begins with understanding how the building will actually be used.
+    Whether you're storing equipment, protecting an aircraft, expanding your
+    business, or building a workshop, we help match the structure to your needs,
+    budget, and location.
+</p>
+
+<p>
+    Rather than overwhelming customers with options, we focus on clear
+    recommendations, honest communication, and a process that's easy to understand.
+</p>
+
+<section class="values-section">
+    <p class="eyebrow">What matters to us</p>
+    <h2>Built on simple standards.</h2>
+
+    <div class="values-grid">
+        @for (value of values; track value.title) {
+        <div class="value-card">
+            <span class="material-symbols-rounded">{{ value.icon }}</span>
+            <h3>{{ value.title }}</h3>
+            <p>{{ value.description }}</p>
+        </div>
+        }
+    </div>
+</section>
+
+<section class="split-section">
+    <div class="split-image">
+        <img src="/ben-koorengevel-construction.jpg" alt="Steel building frame under construction" />
+    </div>
+
+    <div class="split-copy">
+        <p class="eyebrow">Our Role</p>
+        <h2>Clear guidance from planning through installation.</h2>
+        <p>
+            A steel building project can involve design choices, engineering
+            requirements, site conditions, timelines, budgets, and code considerations.
+            We help customers understand what comes next so decisions feel manageable,
+            not overwhelming.
+        </p>
+
+        <div class="bullet-list">
+            @for (item of workStyle; track item) {
+            <div class="bullet-item">
+                <span class="material-symbols-rounded">check_circle</span>
+                <p>{{ item }}</p>
+            </div>
+            }
+        </div>
+    </div>
+</section>
+
+<section class="experience-section">
+
+    <p class="eyebrow">Working With Heritage</p>
+
+    <h2>A direct relationship from start to finish.</h2>
+
+    <p>
+        When you contact Heritage, you'll work directly with someone who understands
+        your project and can guide you through the process. There are no sales
+        departments or handoffs between multiple representatives—just straightforward
+        communication focused on helping you make the right decisions for your building.
+    </p>
+
+</section>
+
+<section class="service-section">
+    <div class="service-copy">
+        <p class="eyebrow light">What we support</p>
+        <h2>Custom steel buildings for commercial, agricultural, aviation, and residential use.</h2>
+        <p>
+            Every project starts with a different goal. Some customers need space for
+            equipment, aircraft, inventory, vehicles, animals, business operations, or
+            everyday living. Heritage helps shape the building around that use.
+        </p>
+    </div>
+
+    <div class="service-grid">
+        @for (item of buildingUses; track item) {
+        <div>{{ item }}</div>
+        }
+    </div>
+</section>
+
+<section class="faq-section">
+    <div class="section-heading">
+        <p class="eyebrow">Common questions</p>
+        <h2>A few things people usually ask first.</h2>
+    </div>
+
+    <div class="faq-list">
+        @for (faq of faqs; track faq.question) {
+        <details>
+            <summary>{{ faq.question }}</summary>
+            <p>{{ faq.answer }}</p>
+        </details>
+        }
+    </div>
+</section>
+
+<section class="about-cta">
+    <div>
+        <p class="eyebrow light">Ready to talk?</p>
+        <h2>Let's talk about your project.</h2>
+        <p>Whether you're just starting to explore ideas or you're ready to request a quote, we'd be happy to answer
+            your questions and help you determine the right building for your needs.
+        </p>
+    </div>
+
+    <button class="primary" (click)="contactButtonClicked('about_bottom')">
+        Get My Quote
+    </button>
+</section>

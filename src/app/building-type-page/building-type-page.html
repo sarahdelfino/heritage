@@ -1,0 +1,123 @@
+@if (page(); as page) {
+  <section class="type-hero">
+    <img class="type-hero__image" [src]="page.heroImage" [alt]="page.eyebrow" />
+
+    <div class="type-hero__overlay"></div>
+
+    <div class="type-hero__content">
+      <p class="eyebrow">{{ page.eyebrow }}</p>
+      <h1>{{ page.title }}</h1>
+      <p class="subtitle">{{ page.subtitle }}</p>
+
+      <div class="hero-actions">
+        <a routerLink="/quote" class="btn primary">Get My Quote</a>
+        <a href="#sizes" class="btn secondary">View Popular Sizes</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-strip">
+    <div>Engineered for local codes</div>
+    <div>Premium American steel</div>
+    <div>Faster installation</div>
+    <div>Low maintenance</div>
+  </section>
+
+  <section class="intro-section">
+    <div class="intro-copy">
+      <p class="eyebrow">Why {{ page.eyebrow }}?</p>
+      <h2>Superior strength. Maximum protection.</h2>
+      <p>
+        Our steel buildings are designed around your property, your use case,
+        and your long-term needs.
+      </p>
+
+      <ul>
+        @for (benefit of page.benefits; track benefit) {
+          <li>{{ benefit }}</li>
+        }
+      </ul>
+
+      <a routerLink="/quote" class="btn primary">Get My Custom Quote</a>
+    </div>
+
+    <div class="intro-media">
+      <img [src]="page.heroImage" [alt]="page.eyebrow" />
+    </div>
+  </section>
+
+  <section id="sizes" class="sizes-section">
+    <p class="eyebrow">Popular {{ page.eyebrow }} Sizes</p>
+    <h2>Sizes to fit your needs.</h2>
+
+    <div class="size-grid">
+      @for (size of page.sizes; track size.title) {
+        <article class="size-card">
+          <h3>{{ size.title }}</h3>
+          <p>{{ size.description }}</p>
+          <a routerLink="/quote">Get a quote →</a>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="process-section">
+    <p class="eyebrow">Our Process</p>
+    <h2>A simple process. Built around you.</h2>
+
+    <div class="process-grid">
+      <article>
+        <span>1</span>
+        <h3>Tell us about your project</h3>
+        <p>Share your needs, site location, and building goals.</p>
+      </article>
+
+      <article>
+        <span>2</span>
+        <h3>Receive your custom design</h3>
+        <p>We’ll provide a layout and accurate quote.</p>
+      </article>
+
+      <article>
+        <span>3</span>
+        <h3>Engineering & fabrication</h3>
+        <p>Your building is engineered and fabricated to exact specs.</p>
+      </article>
+
+      <article>
+        <span>4</span>
+        <h3>Delivery</h3>
+        <p>Materials are delivered directly to your site.</p>
+      </article>
+
+      <article>
+        <span>5</span>
+        <h3>Installation</h3>
+        <p>Our team or yours can erect your building.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="quote-section">
+    <div>
+      <p class="eyebrow">Free Quote</p>
+      <h2>Get your free {{ page.eyebrow }} quote.</h2>
+      <p>
+        Tell us a little about your project and we’ll help you take the next
+        step.
+      </p>
+    </div>
+
+    <form class="quote-form">
+      <input type="text" placeholder="Building Type" [value]="page.eyebrow" />
+      <input type="text" placeholder="Width" />
+      <input type="text" placeholder="Length" />
+      <input type="text" placeholder="Height" />
+      <input type="text" placeholder="Zip Code" />
+      <input type="email" placeholder="Email Address" />
+      <input type="tel" placeholder="Phone Number" />
+
+      <button type="submit">Get My Preliminary Quote</button>
+    </form>
+  </section>
+}

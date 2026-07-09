@@ -23,6 +23,109 @@
             "style": "object-position: top;"
         }
     ],
+    "buildings": [
+        {
+            "id": 0,
+            "icon": "plane_contrails",
+            "title": "Aircraft Hangars",
+            "description": "Protect what matters most with clear-span space and strength.",
+            "link": "/aircraft-hangars",
+            "image": "hangar.png"
+        },
+                {
+            "id": 1,
+            "icon": "apartment",
+            "title": "Commercial Buildings",
+            "description": "Professional spaces built for your business and your future.",
+            "link": "/commercial-buildings",
+            "image": "commercial.jpg"
+        },
+                {
+            "id": 2,
+            "icon": "tools_power_drill",
+            "title": "Workshops",
+            "description": "Functional, efficient space for work, projects, & storage.",
+            "link": "/workshops",
+            "image": "ex3.svg"
+        },
+                {
+            "id": 3,
+            "icon": "agriculture",
+            "title": "Agricultural Buildings",
+            "description": "Rugged structures built for farms, equipment, & livestock.",
+            "link": "/agricultural-buildings",
+            "image": "roger-starnes-agricultural-building.jpg"
+        },
+                {
+            "id": 4,
+            "icon": "airport_shuttle",
+            "title": "RV & Boat Storage",
+            "description": "Keep your vehicles safe, secure, and out of the elements.",
+            "link": "/rv-boat-storage",
+            "image": "rv-storage.png"
+        },
+                {
+            "id": 5,
+            "icon": "house",
+            "title": "Residential Structures",
+            "description": "Stylish, durable homes & barndominiums built your way.",
+            "link": "/residential-buildings",
+            "image": "steven-van-elk-residential.jpg"
+        }
+    ],
+    "highlights": [
+        {
+            "id": 0,
+            "icon": "shield",
+            "title": "Stronger by design",
+            "description": "High-quality cold-formed steel engineered for your location and built to last."
+        },
+                {
+            "id": 1,
+            "icon": "nest_clock_farsight_analog",
+            "title": "Faster installation",
+            "description": "Precision components mean quicker assembly & less on-site labor."
+        },
+                {
+            "id": 2,
+            "icon": "paid",
+            "title": "Lower maintenance",
+            "description": "Galvanized steel resists corrosion for long-term performance."
+        },
+                {
+            "id": 3,
+            "icon": "star",
+            "title": "Built in America",
+            "description": "Proudly manufactured in the USA using premium steel."
+        }
+    ],
+    "steps": [
+        {
+            "id": 0,
+            "title": "Tell us your vision",
+            "description": "Share your needs, site info, and building goals."
+        },
+                {
+            "id": 1,
+            "title": "Custom design",
+            "description": "We work with you to create a custom design and provide a clear, detailed quote."
+        },
+                {
+            "id": 2,
+            "title": "Engineering & fabrication",
+            "description": "Your building is engineered for your location and precision-fabricated."
+        },
+                {
+            "id": 3,
+            "title": "Delivery",
+            "description": "Materials are delivered directly to your site on schedule."
+        },
+                {
+            "id": 4,
+            "title": "Installation",
+            "description": "Our team or yours can erect your building with confidence."
+        }
+    ],
     "carousel": [
         {
             "title": "Architecture Services Available",
@@ -65,28 +168,6 @@
                     "image": "floorplan4.jpg"
                 }
             ]
-        }
-    ],
-    "process": [
-        {
-            "icon": "clarification.png",
-            "title": "Consultation",
-            "description": "Discuss your needs, site requirements, and budget to create the perfect solution."
-        },
-        {
-            "icon": "blueprint.png",
-            "title": "Design & Engineering",
-            "description": "Our team develops detailed plans and structural engineering for your approval."
-        },
-        {
-            "icon": "tool.png",
-            "title": "Manufacturing",
-            "description": "Precision fabrication of all components in our state-of-the-art-facility."
-        },
-        {
-            "icon": "manufacture.png",
-            "title": "Installation",
-            "description": "Professional on-site assembly with minimal disruption to your operations."
         }
     ],
     "footer": [

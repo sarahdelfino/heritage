@@ -1,0 +1,72 @@
+.process-container {
+  text-align: center;
+  background-color: #FBF9F4;
+  padding: 24px;
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.step {
+  width: 200px;
+  position: relative;
+  padding: 1rem;
+}
+
+.step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 2.5rem; // half of .step-id height
+  left: calc(50% + 2rem);
+  right: calc(-50% + 2rem);
+  height: 2px;
+
+  background: repeating-linear-gradient(
+    to right,
+    #b8aa98 0 2px,
+    transparent 2px 6px
+  );
+}
+
+.step-id {
+  position: relative;
+  z-index: 2;
+
+  margin: auto;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(180deg, #6d2329 0%, #4f171c 100%);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+
+  user-select: none;
+}
+
+.step-title {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  font-size: .75rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0px 0px;
+  color: #500909
+}

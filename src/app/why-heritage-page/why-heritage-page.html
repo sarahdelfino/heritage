@@ -1,0 +1,151 @@
+<section class="why-hero">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <p class="eyebrow">Why Heritage</p>
+    <h1>Steel buildings designed around your project.</h1>
+    <p>
+      From concept to completion, Heritage provides engineered steel building
+      solutions designed for your property, your goals, and your timeline.
+    </p>
+
+    <button class="primary" style="margin-top: 10px;" (click)="contactButtonClicked('why_heritage_hero')">
+      Get My Quote
+    </button>
+  </div>
+</section>
+
+<section class="perk-container">
+  <div class="perks">
+    @for (perk of perks; track perk.title) {
+      <div class="perk">
+        <img [src]="perk.icon" [alt]="perk.title" />
+        <h3>{{ perk.title }}</h3>
+      </div>
+    }
+  </div>
+</section>
+
+<section class="split-section">
+  <div class="split-image">
+    <img src="/ex1.png" alt="Steel building frame" />
+  </div>
+
+  <div class="split-copy">
+    <p class="eyebrow">Full-service support</p>
+    <h2>A Partner Through Every Step</h2>
+    <p>
+      Many companies simply sell you a building package. Heritage helps manage
+      the process from consultation and design through engineering, fabrication,
+      delivery, and installation.
+    </p>
+
+    <div class="check-grid">
+      @for (item of partnerSteps; track item) {
+        <div class="check-item">
+          <span class="material-symbols-rounded">check_circle</span>
+          {{ item }}
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="dark-section">
+  <div>
+    <p class="eyebrow light">Engineered for your location</p>
+    <h2>Every Building is Designed for Your Property.</h2>
+    <p>
+      Your building needs to perform where it stands. Heritage works with
+      engineering requirements such as wind loads, snow loads, local codes,
+      occupancy, and intended use.
+    </p>
+  </div>
+
+  <div class="engineering-card">
+    @for (item of engineeringItems; track item.title) {
+      <div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+    }
+  </div>
+</section>
+
+<section class="cards-section">
+  <p class="eyebrow">Built to last</p>
+  <h2>Built with quality where it matters most.</h2>
+
+  <div class="feature-cards">
+    @for (card of qualityCards; track card.title) {
+      <div class="feature-card">
+        <span class="material-symbols-rounded">{{ card.icon }}</span>
+        <h3>{{ card.title }}</h3>
+        <p>{{ card.description }}</p>
+      </div>
+    }
+  </div>
+</section>
+<!-- <app-process></app-process> -->
+<section class="process-section">
+  <p class="eyebrow">Our process</p>
+  <h2>Simple Process. Superior Results.</h2>
+
+  <div class="process-grid">
+    @for (step of processSteps; track step.id) {
+      <div class="process-step">
+        <div class="step-number">{{ step.id }}</div>
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.description }}</p>
+      </div>
+    }
+  </div>
+</section>
+
+<section class="building-section">
+  <p class="eyebrow">Building types</p>
+  <h2>Solutions for the Way You Build</h2>
+
+  <div class="building-grid">
+    @for (type of buildingTypes; track type.title) {
+      <a class="building-card" [href]="type.link">
+        <img [src]="type.image" [alt]="type.title" />
+        <div>
+          <h3>{{ type.title }}</h3>
+          <span class="material-symbols-rounded">arrow_forward</span>
+        </div>
+      </a>
+    }
+  </div>
+</section>
+
+<section class="expect-section">
+  <p class="eyebrow">What you can expect</p>
+  <h2>Confidence From Start to Finish</h2>
+
+  <div class="expect-grid">
+    @for (item of expectations; track item.title) {
+      <div class="expect-card">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+    }
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="cta-overlay"></div>
+
+  <div class="cta-content">
+    <p class="eyebrow light">Ready to build?</p>
+    <h2>Let’s Design a Steel Building That Works for You.</h2>
+    <p>
+      Whether you're planning a workshop, hangar, commercial facility, or
+      agricultural building, Heritage can help you find the right solution.
+    </p>
+
+    <button class="primary" (click)="contactButtonClicked('why_heritage_bottom')">
+      Get My Quote
+    </button>
+  </div>
+</section>

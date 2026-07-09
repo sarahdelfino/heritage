@@ -1,0 +1,54 @@
+[
+    {
+        "id": 0,
+        "title": "Building Types",
+        "link": "",
+        "subtitles": [
+            {
+                "id": 0,
+                "title": "Aircraft Hangars",
+                "link": "/aircraft-hangars"
+            },
+            {
+                "id": 1,
+                "title": "Commercial Buildings",
+                "link": "/commercial-buildings"
+            },
+            {
+                "id": 2,
+                "title": "Workshops",
+                "link": "/workshops"
+            },
+            {
+                "id": 3,
+                "title": "Agricultural Buildings",
+                "link": "/agricultural-buildings"
+            },
+            {
+                "id": 4,
+                "title": "RV & Boat Storage",
+                "link": "/rv-boat-storage"
+            },
+            {
+                "id": 5,
+                "title": "Residential Buildings",
+                "link": "/residential-buildings"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Why Heritage?",
+        "link": "/why-heritage"
+    },
+    {
+        "id": 3,
+        "title": "About",
+        "link": "/about"
+    },
+    {
+        "id": 4,
+        "title": "Resources",
+        "link": "/resources"
+    }
+]

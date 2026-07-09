@@ -1,0 +1,64 @@
+<div class="nav-container">
+  <a href="/" class="logo-link">
+    <img class="logo" src="HSB-nobg.png" alt="Heritage Steel Buildings">
+  </a>
+
+  <button class="mobile-menu-btn" type="button" (click)="menuOpen = !menuOpen">
+    <span class="material-symbols-rounded">
+      {{ menuOpen ? 'close' : 'menu' }}
+    </span>
+  </button>
+
+  <ul class="nav-links" [class.open]="menuOpen">
+    @for (link of navLinks; track link.id) {
+      <li class="nav-item" [class.has-subnav]="link.subtitles">
+        <a [href]="link.link" class="nav-link">
+          {{ link.title }}
+
+          @if (link.subtitles) {
+            <span class="material-symbols-rounded">
+              keyboard_arrow_down
+            </span>
+          }
+        </a>
+
+        @if (link.subtitles) {
+          <div class="sub-nav">
+            <ul class="sub-nav-links">
+              @for (subLink of link.subtitles; track subLink.id) {
+                <li>
+                  <a [href]="subLink.link" class="sub-nav-item">
+                    {{ subLink.title }}
+                    <span class="material-symbols-rounded">
+                      chevron_forward
+                    </span>
+                  </a>
+                </li>
+              }
+            </ul>
+          </div>
+        }
+      </li>
+    }
+
+    <li class="mobile-designer-item">
+      <a
+        class="btn secondary mobile-designer-btn"
+        href="https://heritage3d.actbuildingsystems.com"
+        target="_blank"
+        (click)="designButtonClicked()"
+      >
+        Go To Online Designer
+      </a>
+    </li>
+  </ul>
+
+  <a
+    class="btn secondary desktop-designer-btn"
+    href="https://heritage3d.actbuildingsystems.com"
+    target="_blank"
+    (click)="designButtonClicked()"
+  >
+    Go To Online Designer
+  </a>
+</div>

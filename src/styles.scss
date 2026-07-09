@@ -44,25 +44,44 @@ body {
 
 
 body {
-  background-color: #e4e4e4;
+  // background-color: #e4e4e4;
+  background-color: #FBF9F4;
 }
 
 a.btn {
   text-decoration: none;
   margin: 0px !important;
   width: fit-content;
-  font-size: 1rem;
+  font-size: .85rem;
+}
+
+img.logo {
+    height: 56px;
+    max-height: 56px;
+    width: auto;
+}
+
+img.frame {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    width: 90vw;
+    margin: auto;
 }
 
 button, .btn {
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: .12em;
   width: 224px;
   padding: 12px 24px;
   color: white;
-  font-size: 1.25em;
+  font-size: .85rem;
+  font-weight: 600;
   border: none;
   border-radius: 4px;
-  background-color: #500909;
+  text-transform: uppercase;
   cursor: pointer;
+    transition: .25s ease;
   box-shadow: 0 16px 34px rgba(0,0,0,.14);
 
   &:hover {
@@ -73,7 +92,7 @@ button, .btn {
 
 .primary {
   background-color: #500909;
-  border: 2px solid #500909;
+  border: 1px solid white;
 
   &:hover {
     background: rgb(193, 146, 146, .6);
@@ -82,15 +101,21 @@ button, .btn {
 
 .secondary {
   background-color: #c9a14a;
-  border: 2px solid #c9a14a;
+  border: 1px solid #c9a14a;
 
   &:hover {
     background: rgb(204, 178, 108, .6);
   }
 }
 
+.tertiary {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
 .outline {
-  border: 2px solid #500909;
+  border: 1px solid #500909;
   background-color: transparent;
   color: #500909;
 }
