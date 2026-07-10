@@ -3,7 +3,7 @@
         {
             "title": "Affordable Strength",
             "description": "Precision components, no welding required. Decades of corrosion-free durability without traditional red-iron prices.",
-            "image": "ex1.png"
+            "image": "ex1.webp"
         },
         {
             "title": "Shorter Lead Times",
@@ -13,7 +13,7 @@
         {
             "title": "Save on Concrete",
             "description": "20-25% less concrete required than traditional red-iron buildings. No pre-set anchor bolts.",
-            "image": "ex3.png",
+            "image": "ex3.webp",
             "style": "object-position: center 70%;"
         },
         {
@@ -30,7 +30,7 @@
             "title": "Aircraft Hangars",
             "description": "Protect what matters most with clear-span space and strength.",
             "link": "/building-types/aircraft-hangars",
-            "image": "hangar.png"
+            "image": "hangar.webp"
         },
                 {
             "id": 1,
@@ -46,7 +46,7 @@
             "title": "Workshops",
             "description": "Functional, efficient space for work, projects, & storage.",
             "link": "/building-types/workshops",
-            "image": "ex3.png"
+            "image": "ex3.webp"
         },
                 {
             "id": 3,
@@ -161,11 +161,11 @@
                 },
                 {
                     "id": "3",
-                    "image": "floorplan3.jpg"
+                    "image": "floorplan3.webp"
                 },
                 {
                     "id": "4",
-                    "image": "floorplan4.jpg"
+                    "image": "floorplan4.webp"
                 }
             ]
         }
@@ -247,8 +247,8 @@
         {
             "title": "What colors are available for a Heritage Steel building?",
             "description": "Heritage Steel buildings are available in a wide range of standard color options to match your preferences and project requirements. From neutral tones to more distinctive finishes, our color selections are designed to provide both durability and visual appeal. For a complete overview of available colors and combinations, we recommend downloading our color chart by clicking the image below.",
-            "image": "color-chart.png",
-            "url": "Heritage-Color-Chart.pdf"
+            "image": "color-chart.webp",
+            "url": "heritage-steel-color-chart.pdf"
         }
     ]
 }

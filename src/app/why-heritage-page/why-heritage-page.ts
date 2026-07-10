@@ -96,7 +96,7 @@ export class WhyHeritagePage {
     {
       title: 'Aircraft Hangars',
       link: '/building-types/aircraft-hangars',
-      image: '/hangar.png',
+      image: '/hangar.webp',
     },
     {
       title: 'Commercial Buildings',
@@ -116,7 +116,7 @@ export class WhyHeritagePage {
     {
       title: 'Workshops',
       link: '/building-types/workshops',
-      image: '/ex3.png',
+      image: '/ex3.webp',
     },
     {
       title: 'Barndominiums',

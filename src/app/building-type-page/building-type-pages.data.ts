@@ -23,7 +23,7 @@ export const BUILDING_TYPE_PAGES: BuildingTypePage[] = [
     metaTitle: 'Aircraft Hangars | Heritage Steel Builds',
     metaDescription:
       'Custom steel aircraft hangars engineered for strength, safety, and long-term performance.',
-    heroImage: '/hangar.png',
+    heroImage: '/hangar.webp',
     benefits: [
       'Clear-span interiors maximize usable aircraft space',
       'Hydraulic, bifold, sliding, and Schweiss door options',
@@ -87,7 +87,7 @@ export const BUILDING_TYPE_PAGES: BuildingTypePage[] = [
     metaTitle: 'Steel Workshops | Heritage Steel Builds',
     metaDescription:
       'Custom steel workshops for hobbyists, mechanics, contractors, and business owners.',
-    heroImage: '/ex3.png',
+    heroImage: '/ex3.webp',
     benefits: [
       'Completely customizable layouts',
       'Clear-span interiors maximize workspace',
