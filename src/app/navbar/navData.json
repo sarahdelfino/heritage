@@ -2,37 +2,37 @@
     {
         "id": 0,
         "title": "Building Types",
-        "link": "",
+        "link": "/building-types",
         "subtitles": [
             {
                 "id": 0,
                 "title": "Aircraft Hangars",
-                "link": "/aircraft-hangars"
+                "link": "/building-types/aircraft-hangars"
             },
             {
                 "id": 1,
                 "title": "Commercial Buildings",
-                "link": "/commercial-buildings"
+                "link": "/building-types/commercial-buildings"
             },
             {
                 "id": 2,
                 "title": "Workshops",
-                "link": "/workshops"
+                "link": "/building-types/workshops"
             },
             {
                 "id": 3,
                 "title": "Agricultural Buildings",
-                "link": "/agricultural-buildings"
+                "link": "/building-types/agricultural-buildings"
             },
             {
                 "id": 4,
                 "title": "RV & Boat Storage",
-                "link": "/rv-boat-storage"
+                "link": "/building-types/rv-boat-storage"
             },
             {
                 "id": 5,
                 "title": "Residential Buildings",
-                "link": "/residential-buildings"
+                "link": "/building-types/residential-buildings"
             }
         ]
     },
@@ -50,5 +50,10 @@
         "id": 4,
         "title": "Resources",
         "link": "/resources"
+    },
+        {
+        "id": 3,
+        "title": "Contact",
+        "link": "/contact"
     }
 ]

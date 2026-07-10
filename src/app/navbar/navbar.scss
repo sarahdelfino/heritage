@@ -20,12 +20,18 @@ a {
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 img.logo {
   height: 56px;
   max-height: 56px;
   width: auto;
+  cursor: pointer;
+}
+
+img.logo:hover {
+  cursor: pointer;
 }
 
 .nav-links {
@@ -43,6 +49,7 @@ img.logo {
 .nav-item {
   position: relative;
   list-style: none;
+  cursor: pointer;
 }
 
 .nav-link {
@@ -54,6 +61,7 @@ img.logo {
   font-weight: 700;
   letter-spacing: 0.04em;
   padding: 28px 4px;
+  cursor: pointer;
 }
 
 .nav-item:hover .sub-nav {

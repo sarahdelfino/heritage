@@ -116,33 +116,33 @@ export class WhyHeritagePage {
 
   buildingTypes = [
     {
-      title: 'Airport Hangars',
-      link: '/airport-hangars',
+      title: 'Aircraft Hangars',
+      link: '/building-types/aircraft-hangars',
       image: '/hangar.png',
     },
     {
       title: 'Commercial Buildings',
-      link: '/commercial-buildings',
+      link: '/building-types/commercial-buildings',
       image: '/commercial.jpg',
     },
     {
       title: 'Agricultural Buildings',
-      link: '/agricultural-buildings',
+      link: '/building-types/agricultural-buildings',
       image: '/roger-starnes-agricultural-building.jpg',
     },
     {
-      title: 'Garages',
-      link: '/garages',
+      title: 'RV & Boat Storage',
+      link: '/building-types/rv-boat-storage',
       image: '/rv-storage.png',
     },
     {
       title: 'Workshops',
-      link: '/workshops',
-      image: '/ex3.svg',
+      link: '/building-types/workshops',
+      image: '/ex3.png',
     },
     {
       title: 'Barndominiums',
-      link: '/barndominiums',
+      link: '/building-types/residential-buildings',
       image: 'steven-van-elk-residential.jpg',
     },
   ];

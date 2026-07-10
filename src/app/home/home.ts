@@ -7,10 +7,11 @@ import { ViewportScroller } from '@angular/common';
 import {MatCardModule} from '@angular/material/card';
 import { RouterLink } from "@angular/router";
 import { Process } from "../process/process";
+import { Carousel } from '../carousel/carousel';
 
 @Component({
   selector: 'app-home',
-  imports: [Contact, MatCardModule, RouterLink, Process],
+  imports: [Contact, MatCardModule, Carousel, Process],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

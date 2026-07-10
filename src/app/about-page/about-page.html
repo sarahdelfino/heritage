@@ -1,5 +1,5 @@
-<section class="about-hero">
-    <div class="about-hero-copy">
+<section class="page-hero">
+    <div class="page-hero-copy">
         <p class="eyebrow">About Heritage</p>
         <h1>Steel building support from real people, not a catalog.</h1>
         <p>
@@ -9,25 +9,31 @@
         </p>
     </div>
 
-    <div class="about-hero-image">
+    <div class="page-hero-image">
         <img src="/nate-johnston-consult.jpg" alt="Steel building exterior" />
     </div>
 </section>
 
-<p class="eyebrow">Our Approach</p>
-<h2>Practical guidance from the first conversation.</h2>
+<section class="intro-section">
+  <div>
+    <p class="eyebrow">Our Approach</p>
+    <h2>Practical guidance from the first conversation.</h2>
+  </div>
 
-<p>
-    Every project begins with understanding how the building will actually be used.
-    Whether you're storing equipment, protecting an aircraft, expanding your
-    business, or building a workshop, we help match the structure to your needs,
-    budget, and location.
-</p>
+  <div class="intro-copy">
+    <p>
+      Every project begins with understanding how the building will actually be used.
+      Whether you're storing equipment, protecting an aircraft, expanding your
+      business, or building a workshop, we help match the structure to your needs,
+      budget, and location.
+    </p>
 
-<p>
-    Rather than overwhelming customers with options, we focus on clear
-    recommendations, honest communication, and a process that's easy to understand.
-</p>
+    <p>
+      Rather than overwhelming customers with options, we focus on clear
+      recommendations, honest communication, and a process that's easy to understand.
+    </p>
+  </div>
+</section>
 
 <section class="values-section">
     <p class="eyebrow">What matters to us</p>
@@ -110,10 +116,10 @@
     </div>
 
     <div class="faq-list">
-        @for (faq of faqs; track faq.question) {
+        @for (faq of faqs; track $index) {
         <details>
-            <summary>{{ faq.question }}</summary>
-            <p>{{ faq.answer }}</p>
+            <summary>{{ faq.title }}</summary>
+            <p>{{ faq.description }}</p>
         </details>
         }
     </div>
@@ -127,8 +133,5 @@
             your questions and help you determine the right building for your needs.
         </p>
     </div>
-
-    <button class="primary" (click)="contactButtonClicked('about_bottom')">
-        Get My Quote
-    </button>
+    <a class="btn secondary" href="/contact" (click)="contactButtonClicked('about_bottom')">Get my quote</a>
 </section>

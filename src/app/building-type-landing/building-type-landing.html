@@ -1,0 +1,68 @@
+<section class="page-hero">
+  <div class="page-hero-copy">
+    <p class="eyebrow">Building Types</p>
+    <h1>Steel buildings designed for the way you work, store, and build.</h1>
+    <p>
+      Explore common steel building applications and find the structure that fits
+      your property, goals, and long-term needs.
+    </p>
+  </div>
+
+  <div class="page-hero-image">
+    <img src="/ex1.png" alt="Custom steel building exterior" />
+  </div>
+</section>
+
+<section class="building-types-section">
+  <div class="section-heading">
+    <p class="eyebrow">Explore options</p>
+    <h2>Find the right building for your project.</h2>
+  </div>
+
+  <div class="building-grid">
+    @for (type of buildingTypes; track type.title) {
+      <a class="building-card" [routerLink]="type.link">
+        <img [src]="type.image" [alt]="type.title" />
+
+        <div class="building-card-copy">
+          <h3>{{ type.title }}</h3>
+          <p>{{ type.description }}</p>
+
+          <span class="card-link">
+            Learn More
+            <span class="material-symbols-rounded">arrow_forward</span>
+          </span>
+        </div>
+      </a>
+    }
+  </div>
+</section>
+
+<section class="compare-section">
+  <div>
+    <p class="eyebrow">Not sure where to start?</p>
+    <h2>Start with how the building will be used.</h2>
+  </div>
+
+  <div class="compare-list">
+    @for (item of useCases; track item.title) {
+      <div class="compare-item">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+    }
+  </div>
+</section>
+
+<section class="building-cta">
+  <div>
+    <p class="eyebrow light">Ready to plan?</p>
+    <h2>Tell us what you’re building.</h2>
+    <p>
+      Heritage can help you understand your options and recommend a steel
+      building solution that fits your project.
+    </p>
+  </div>
+
+<a class="btn secondary" href="/contact" (click)="contactButtonClicked('building_types_bottom')">Get my quote</a>
+</section>

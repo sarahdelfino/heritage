@@ -1,28 +1,38 @@
-<section class="why-hero">
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content">
+<section class="page-hero">
+  <div class="page-hero-copy">
     <p class="eyebrow">Why Heritage</p>
     <h1>Steel buildings designed around your project.</h1>
-    <p>
+    <p style="margin-bottom: 18px;">
       From concept to completion, Heritage provides engineered steel building
       solutions designed for your property, your goals, and your timeline.
     </p>
 
-    <button class="primary" style="margin-top: 10px;" (click)="contactButtonClicked('why_heritage_hero')">
-      Get My Quote
-    </button>
+    <a class="btn primary" href="/contact" (click)="contactButtonClicked('why_heritage_hero')">Get my quote</a>
+  </div>
+
+  <div class="page-hero-image">
+    <img src="/ronnakorn-triraganon-consult.jpg" alt="Steel building project planning" />
   </div>
 </section>
 
 <section class="perk-container">
   <div class="perks">
-    @for (perk of perks; track perk.title) {
-      <div class="perk">
-        <img [src]="perk.icon" [alt]="perk.title" />
-        <h3>{{ perk.title }}</h3>
-      </div>
-    }
+    <div class="perk">
+      <img src="steel.svg">
+      <h3>Made in USA</h3>
+    </div>
+    <div class="perk">
+      <img src="shield.svg">
+      <h3>Engineered for local codes</h3>
+    </div>
+    <div class="perk">
+      <img src="finance.svg">
+      <h3>In-house engineering and architectural services</h3>
+    </div>
+    <div class="perk">
+      <img src="medal.svg">
+      <h3>Heritage erectors available for install</h3>
+    </div>
   </div>
 </section>
 
@@ -42,10 +52,10 @@
 
     <div class="check-grid">
       @for (item of partnerSteps; track item) {
-        <div class="check-item">
-          <span class="material-symbols-rounded">check_circle</span>
-          {{ item }}
-        </div>
+      <div class="check-item">
+        <span class="material-symbols-rounded">check_circle</span>
+        {{ item }}
+      </div>
       }
     </div>
   </div>
@@ -64,10 +74,10 @@
 
   <div class="engineering-card">
     @for (item of engineeringItems; track item.title) {
-      <div>
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.description }}</p>
-      </div>
+    <div>
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.description }}</p>
+    </div>
     }
   </div>
 </section>
@@ -78,11 +88,11 @@
 
   <div class="feature-cards">
     @for (card of qualityCards; track card.title) {
-      <div class="feature-card">
-        <span class="material-symbols-rounded">{{ card.icon }}</span>
-        <h3>{{ card.title }}</h3>
-        <p>{{ card.description }}</p>
-      </div>
+    <div class="feature-card">
+      <span class="material-symbols-rounded">{{ card.icon }}</span>
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.description }}</p>
+    </div>
     }
   </div>
 </section>
@@ -93,11 +103,11 @@
 
   <div class="process-grid">
     @for (step of processSteps; track step.id) {
-      <div class="process-step">
-        <div class="step-number">{{ step.id }}</div>
-        <h3>{{ step.title }}</h3>
-        <p>{{ step.description }}</p>
-      </div>
+    <div class="process-step">
+      <div class="step-number">{{ step.id }}</div>
+      <h3>{{ step.title }}</h3>
+      <p>{{ step.description }}</p>
+    </div>
     }
   </div>
 </section>
@@ -108,13 +118,13 @@
 
   <div class="building-grid">
     @for (type of buildingTypes; track type.title) {
-      <a class="building-card" [href]="type.link">
-        <img [src]="type.image" [alt]="type.title" />
-        <div>
-          <h3>{{ type.title }}</h3>
-          <span class="material-symbols-rounded">arrow_forward</span>
-        </div>
-      </a>
+    <a class="building-card" [href]="type.link">
+      <img [src]="type.image" [alt]="type.title" />
+      <div>
+        <h3>{{ type.title }}</h3>
+        <span class="material-symbols-rounded">arrow_forward</span>
+      </div>
+    </a>
     }
   </div>
 </section>
@@ -125,10 +135,10 @@
 
   <div class="expect-grid">
     @for (item of expectations; track item.title) {
-      <div class="expect-card">
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.description }}</p>
-      </div>
+    <div class="expect-card">
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.description }}</p>
+    </div>
     }
   </div>
 </section>
@@ -139,13 +149,11 @@
   <div class="cta-content">
     <p class="eyebrow light">Ready to build?</p>
     <h2>Let’s Design a Steel Building That Works for You.</h2>
-    <p>
+    <p style="margin-bottom: 18px;">
       Whether you're planning a workshop, hangar, commercial facility, or
       agricultural building, Heritage can help you find the right solution.
     </p>
 
-    <button class="primary" (click)="contactButtonClicked('why_heritage_bottom')">
-      Get My Quote
-    </button>
+    <a class="btn secondary" href="/contact" (click)="contactButtonClicked('why_heritage_bottom')">Get my quote</a>
   </div>
 </section>

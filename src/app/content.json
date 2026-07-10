@@ -29,7 +29,7 @@
             "icon": "plane_contrails",
             "title": "Aircraft Hangars",
             "description": "Protect what matters most with clear-span space and strength.",
-            "link": "/aircraft-hangars",
+            "link": "/building-types/aircraft-hangars",
             "image": "hangar.png"
         },
                 {
@@ -37,7 +37,7 @@
             "icon": "apartment",
             "title": "Commercial Buildings",
             "description": "Professional spaces built for your business and your future.",
-            "link": "/commercial-buildings",
+            "link": "/building-types/commercial-buildings",
             "image": "commercial.jpg"
         },
                 {
@@ -45,15 +45,15 @@
             "icon": "tools_power_drill",
             "title": "Workshops",
             "description": "Functional, efficient space for work, projects, & storage.",
-            "link": "/workshops",
-            "image": "ex3.svg"
+            "link": "/building-types/workshops",
+            "image": "ex3.png"
         },
                 {
             "id": 3,
             "icon": "agriculture",
             "title": "Agricultural Buildings",
             "description": "Rugged structures built for farms, equipment, & livestock.",
-            "link": "/agricultural-buildings",
+            "link": "/building-types/agricultural-buildings",
             "image": "roger-starnes-agricultural-building.jpg"
         },
                 {
@@ -61,7 +61,7 @@
             "icon": "airport_shuttle",
             "title": "RV & Boat Storage",
             "description": "Keep your vehicles safe, secure, and out of the elements.",
-            "link": "/rv-boat-storage",
+            "link": "/building-types/rv-boat-storage",
             "image": "rv-storage.png"
         },
                 {
@@ -69,7 +69,7 @@
             "icon": "house",
             "title": "Residential Structures",
             "description": "Stylish, durable homes & barndominiums built your way.",
-            "link": "/residential-buildings",
+            "link": "/building-types/residential-buildings",
             "image": "steven-van-elk-residential.jpg"
         }
     ],
@@ -78,13 +78,13 @@
             "id": 0,
             "icon": "shield",
             "title": "Stronger by design",
-            "description": "High-quality cold-formed steel engineered for your location and built to last."
+            "description": "Pre-engineered steel buildings, designed to last decades on your land."
         },
                 {
             "id": 1,
             "icon": "nest_clock_farsight_analog",
-            "title": "Faster installation",
-            "description": "Precision components mean quicker assembly & less on-site labor."
+            "title": "Quick leadtimes",
+            "description": "USA based engineers means shorter lead times and faster drawings. Cold formed steel buildings deliver in 2-4 weeks."
         },
                 {
             "id": 2,

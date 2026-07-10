@@ -1,18 +1,50 @@
 <app-navbar></app-navbar>
 <router-outlet></router-outlet>
-<div class="footer-container">
-    <img class="logo" src="HSB-nobg.png">
-    <div class="footer-section-container">
-        @for (section of footer; track $index) {
-        <div class="footer-section">
-            <p class="footer-title">{{ section.title }}</p>
-            @for (link of section.links; track $index) {
-            <div class="footer-text">
-                <p [routerLink]="link?.link" (click)="footerButtonClicked(`footer_${$index}_clicked`)">{{ link.name }}
-                </p>
-            </div>
-            }
-        </div>
-        }
+<footer class="footer-container">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img class="footer-logo" src="HSB-nobg.png" alt="Heritage Steel Buildings" />
+
+      <p>
+        Custom steel buildings designed around your property, goals, and timeline.
+      </p>
+
+      <a
+        class="footer-cta"
+        href="https://heritage3d.actbuildingsystems.com"
+        target="_blank"
+        (click)="footerButtonClicked('footer_designer_clicked')"
+      >
+        Go To Online Designer
+        <span class="material-symbols-rounded">arrow_forward</span>
+      </a>
     </div>
-</div>
+
+    <div class="footer-section-container">
+      @for (section of footer; track section.title) {
+        <div class="footer-section">
+          <p class="footer-title">{{ section.title }}</p>
+
+          @for (link of section.links; track link.name) {
+            <a
+              class="footer-link"
+              [routerLink]="link?.link"
+              (click)="footerButtonClicked('footer_' + link.name + '_clicked')"
+            >
+              {{ link.name }}
+            </a>
+          }
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Heritage Steel Buildings. All rights reserved.</p>
+
+    <div>
+      <a routerLink="/privacy">Privacy Policy</a>
+      <a routerLink="/terms">Terms</a>
+    </div>
+  </div>
+</footer>

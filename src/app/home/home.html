@@ -6,7 +6,7 @@
 
   <div class="video-overlay">
     <div class="overlay-text">
-      <p class="eyebrow" style="color: #C9A14A">Custom steel buildings</p>
+      <p class="eyebrow" style="color: #C9A14A">Pre-engineered steel buildings</p>
       <h1 class="header-title">Built strong.<br />Built for generations.</h1>
       <p class="header-subtitle">
         Engineered for your property.<br>Built with integrity.
@@ -26,8 +26,8 @@
 </div>
 <div class="perk-container">
     <div class="perks">
-        <div class="perk">
-        <img src="usa.svg">
+                        <div class="perk">
+        <img src="steel.svg">
         <h3>Made in USA</h3>
         </div>
                 <div class="perk">
@@ -35,16 +35,12 @@
         <h3>Engineered for local codes</h3>
         </div>
                 <div class="perk">
-        <img src="steel.svg">
-        <h3>Premium Steel</h3>
-        </div>
-                <div class="perk">
         <img src="finance.svg">
-        <h3>Financing available</h3>
+        <h3>In-house engineering and architectural services</h3>
         </div>
                 <div class="perk">
         <img src="medal.svg">
-        <h3>5-year limited warranty</h3>
+        <h3>Heritage erectors available for install</h3>
         </div>
     </div>
 </div>
@@ -66,12 +62,12 @@
     <p class="eyebrow">
         Built for every need
     </p>
-    <h2 style="margin: 4px 0px 20px;">Versatile Buildings. Endless Possibilities.</h2>
+    <h2 style="margin: 4px 0px 20px;">From Homesteads to Hangars. Build Your Vision.</h2>
     <div class="cards">
         @for (data of buildingTypes; track $index) {
             <a [href]="data.link" class="link-card">
-        <mat-card style="cursor: pointer; background-color: #e4e4e4;" appearance="outlined">
-            <img class="diff" mat-card-image [src]="data?.image">
+        <mat-card class="building-card" style="cursor: pointer; background-color: #e4e4e4;">
+            <img class="building-img" [src]="data?.image">
             <mat-card-content>
                 <span class="material-symbols-rounded" style="font-size: 2.5rem; color: #500909;">
                     {{ data.icon }}
@@ -122,7 +118,7 @@
         }
     </div>
 </div> -->
-<!-- <div class="carousels">
+<div class="carousels">
     <div class="group">
         <h2>Architecture Services Available</h2>
         <app-carousel type="architecture"></app-carousel>
@@ -131,7 +127,7 @@
         <h2>Browse Floor Plans</h2>
         <app-carousel type="floorPlans"></app-carousel>
     </div>
-</div> -->
+</div>
 <!-- <div class="section" style="background-color: #e4e4e4;">
     <h2>FAQ | Your Metal Building Questions Answered</h2>
     <app-faq></app-faq>
@@ -144,7 +140,7 @@
     <img src="3d.png">
     <div class="overlay3d">
         <div class="overlay3d-text">
-            <h1>Use our 3D configurator to create your design</h1>
+            <h1 style="margin-bottom: 18px;">Use our 3D configurator to create your design</h1>
             <a class="btn primary" href="https://heritage3d.actbuildingsystems.com" target="_blank">Design your building
                 now</a>
         </div>

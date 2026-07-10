@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import aboutContent from './aboutContent.json';
+import content from '../content.json';
 
 @Component({
   selector: 'app-about',
@@ -11,7 +12,7 @@ export class AboutPage {
   values = aboutContent.values;
   workStyle = aboutContent.workStyle;
   buildingUses = aboutContent.buildingUses;
-  faqs = aboutContent.faqs;
+  faqs = content.faq;
   steps = aboutContent.steps;
 
   contactButtonClicked(source: string): void {
