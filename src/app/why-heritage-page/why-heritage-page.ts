@@ -9,28 +9,6 @@ import { Process } from "../process/process";
   imports: [Process],
 })
 export class WhyHeritagePage {
-  perks = [
-    {
-      title: 'Made in USA',
-      icon: 'usa.svg',
-    },
-    {
-      title: 'Engineered for Local Codes',
-      icon: 'shield.svg',
-    },
-    {
-      title: 'Premium Steel',
-      icon: 'steel.svg',
-    },
-    {
-      title: 'Financing Available',
-      icon: 'finance.svg',
-    },
-    {
-      title: '5-Year Limited Warranty',
-      icon: 'medal.svg',
-    },
-  ];
 
   partnerSteps = [
     'Consultation',
@@ -123,7 +101,7 @@ export class WhyHeritagePage {
     {
       title: 'Commercial Buildings',
       link: '/building-types/commercial-buildings',
-      image: '/commercial.jpg',
+      image: '/commercial.webp',
     },
     {
       title: 'Agricultural Buildings',

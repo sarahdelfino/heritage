@@ -55,7 +55,7 @@ export const BUILDING_TYPE_PAGES: BuildingTypePage[] = [
     metaTitle: 'Commercial Steel Buildings | Heritage Steel Builds',
     metaDescription:
       'Steel commercial buildings engineered for warehouses, offices, retail spaces, and industrial facilities.',
-    heroImage: '/commercial.jpg',
+    heroImage: '/commercial.webp',
     benefits: [
       'Flexible floor plans for nearly any business',
       'Fast construction minimizes downtime',

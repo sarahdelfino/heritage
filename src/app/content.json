@@ -38,7 +38,7 @@
             "title": "Commercial Buildings",
             "description": "Professional spaces built for your business and your future.",
             "link": "/building-types/commercial-buildings",
-            "image": "commercial.jpg"
+            "image": "commercial.webp"
         },
                 {
             "id": 2,
@@ -132,19 +132,19 @@
             "images": [
                 {
                     "id": "1",
-                    "image": "arch1.png"
+                    "image": "arch1.webp"
                 },
                 {
                     "id": "2",
-                    "image": "arch2.png"
+                    "image": "arch2.webp"
                 },
                 {
                     "id": "3",
-                    "image": "arch3.png"
+                    "image": "arch3.webp"
                 },
                 {
                     "id": "4",
-                    "image": "arch4.png"
+                    "image": "arch4.webp"
                 }
             ]
         },
@@ -153,11 +153,11 @@
             "images": [
                 {
                     "id": "1",
-                    "image": "floorplan1.jpg"
+                    "image": "floorplan1.webp"
                 },
                 {
                     "id": "2",
-                    "image": "floorplan2.jpg"
+                    "image": "floorplan2.webp"
                 },
                 {
                     "id": "3",
