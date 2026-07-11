@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { Process } from "../process/process";
 
 @Component({
   selector: 'app-why-heritage',
   standalone: true,
   templateUrl: './why-heritage-page.html',
-  styleUrl: './why-heritage-page.scss',
-  imports: [Process],
+  styleUrl: './why-heritage-page.scss'
 })
 export class WhyHeritagePage {
 

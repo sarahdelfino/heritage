@@ -1,0 +1,44 @@
+{
+  "home": {
+    "title": "Heritage Steel Buildings | Custom Metal Buildings",
+    "description": "Custom steel buildings for commercial, agricultural, industrial, and residential projects. Design, engineering, fabrication, delivery, and installation.",
+    "canonical": "https://heritagesteelbuilds.com/",
+    "image": "https://heritagesteelbuilds.com/header-load.webp"
+  },
+  "contact": {
+    "title": "Contact Heritage Steel Buildings | Request a Quote",
+    "description": "Contact Heritage Steel Buildings to discuss your commercial, agricultural, industrial, or residential steel building project and request a custom quote.",
+    "canonical": "https://heritagesteelbuilds.com/contact",
+    "image": "https://heritagesteelbuilds.com/header-load.webp"
+  },
+  "residential-buildings": {
+    "title": "Residential Steel Buildings | Heritage Steel Buildings",
+    "description": "Custom residential steel buildings for homes, garages, workshops, barndominiums, and storage. Designed for durability, flexibility, and long-term value.",
+    "canonical": "https://heritagesteelbuilds.com/building-types/residential-buildings",
+    "image": "https://heritagesteelbuilds.com/steven-van-elk-residential.jpg"
+  },
+  "commercial-buildings": {
+    "title": "Commercial Steel Buildings | Heritage Steel Buildings",
+    "description": "Custom commercial steel buildings for offices, retail spaces, warehouses, churches, and more. Engineered around your business and building requirements.",
+    "canonical": "https://heritagesteelbuilds.com/building-types/commercial-buildings",
+    "image": "https://heritagesteelbuilds.com/commercial.webp"
+  },
+  "agricultural-buildings": {
+    "title": "Agricultural Steel Buildings | Heritage Steel Buildings",
+    "description": "Durable agricultural steel buildings for barns, equipment storage, livestock facilities, workshops, and other farming and agricultural applications.",
+    "canonical": "https://heritagesteelbuilds.com/building-types/agricultural-buildings",
+    "image": "https://heritagesteelbuilds.com/roger-starnes-agricultural-building.jpg"
+  },
+  "aircraft-hangars": {
+    "title": "Steel Aircraft Hangars | Heritage Steel Buildings",
+    "description": "Custom steel aircraft hangars engineered for private, commercial, and municipal aviation projects. Protect your aircraft with durable steel construction.",
+    "canonical": "https://heritagesteelbuilds.com/building-types/aircraft-hangars",
+    "image": "https://heritagesteelbuilds.com/hangar.webp"
+  },
+  "rv-boat-storage": {
+    "title": "Steel Storage Buildings | Heritage Steel Buildings",
+    "description": "Custom steel storage buildings for manufacturing, distribution, warehousing, maintenance, and other demanding applications.",
+    "canonical": "https://heritagesteelbuilds.com/building-types/rv-boat-storage",
+    "image": "https://heritagesteelbuilds.com/images/ex3.webp"
+  }
+}
