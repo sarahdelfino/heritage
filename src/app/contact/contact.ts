@@ -12,6 +12,7 @@ import { ContactService } from '../contact-service';
 import formData from './form-data.json';
 import { analytics } from '../firebase.config';
 import { logEvent } from 'firebase/analytics';
+import { GoogleAdsService } from '../google-ads-service';
 
 export type FeetInches =
   | { ok: true; totalInches: number; normalized: string }
@@ -77,6 +78,8 @@ export function dimensionValidator(opts: { minFeet: number; maxFeet: number; max
 export class Contact {
   public contactService = inject(ContactService);
   private readonly breakpoints = inject(BreakpointObserver);
+  private readonly googleAdsService = inject(GoogleAdsService);
+
 
   private readonly isMobile = toSignal(
     this.breakpoints
@@ -230,6 +233,9 @@ async submit(form: FormGroup): Promise<void> {
     console.error('Submission error:', error);
     this.errorText = 'An error occurred while submitting. Please try again later.';
   });
+      this.googleAdsService.trackConversion(
+      'AW-123456789/AbCdEfGhIjKlMnOp'
+    );
 
   this.intakeForm.reset(); 
   this.submitAttempted = false;
