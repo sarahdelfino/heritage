@@ -5,11 +5,41 @@
     "canonical": "https://heritagesteelbuilds.com/",
     "image": "https://heritagesteelbuilds.com/header-load.webp"
   },
+  "about": {
+    "title": "About Heritage Steel Buildings | Steel Building Experts",
+    "description": "Learn about Heritage Steel Buildings and our approach to steel building design, engineering, fabrication, delivery, and installation.",
+    "canonical": "https://heritagesteelbuilds.com/about",
+    "image": "https://heritagesteelbuilds.com/header-load.webp"
+  },
   "contact": {
     "title": "Contact Heritage Steel Buildings | Request a Quote",
     "description": "Contact Heritage Steel Buildings to discuss your commercial, agricultural, industrial, or residential steel building project and request a custom quote.",
     "canonical": "https://heritagesteelbuilds.com/contact",
     "image": "https://heritagesteelbuilds.com/header-load.webp"
+  },
+  "resources": {
+    "title": "Steel Building Resources | Heritage Steel Buildings",
+    "description": "Explore steel building resources, color options, planning information, and helpful downloads from Heritage Steel Buildings.",
+    "canonical": "https://heritagesteelbuilds.com/resources",
+    "image": "https://heritagesteelbuilds.com/header-load.webp"
+  },
+  "why-heritage": {
+    "title": "Why Choose Heritage Steel Buildings",
+    "description": "Discover why customers choose Heritage Steel Buildings for personalized support, quality materials, engineering, fabrication, delivery, and installation.",
+    "canonical": "https://heritagesteelbuilds.com/why-heritage",
+    "image": "https://heritagesteelbuilds.com/header-load.webp"
+  },
+  "building-types": {
+    "title": "Steel Building Types | Heritage Steel Buildings",
+    "description": "Explore custom steel buildings for residential, commercial, agricultural, aviation, storage, and other specialized applications.",
+    "canonical": "https://heritagesteelbuilds.com/building-types",
+    "image": "https://heritagesteelbuilds.com/header-load.webp"
+  },
+  "design-your-building": {
+    "title": "3D Metal Building Designer | Heritage Steel Buildings",
+    "description": "Design your custom metal building online. Explore building sizes, colors, roofing, doors, windows, and layouts with our interactive 3D building designer.",
+    "canonical": "https://heritagesteelbuilds.com/design-your-building",
+    "image": "https://heritagesteelbuilds.com/3d.webp"
   },
   "residential-buildings": {
     "title": "Residential Steel Buildings | Heritage Steel Buildings",
@@ -36,8 +66,8 @@
     "image": "https://heritagesteelbuilds.com/hangar.webp"
   },
   "rv-boat-storage": {
-    "title": "Steel Storage Buildings | Heritage Steel Buildings",
-    "description": "Custom steel storage buildings for manufacturing, distribution, warehousing, maintenance, and other demanding applications.",
+    "title": "RV and Boat Storage Buildings | Heritage Steel Buildings",
+    "description": "Custom steel RV and boat storage buildings designed to protect vehicles, watercraft, equipment, and recreational investments from the elements.",
     "canonical": "https://heritagesteelbuilds.com/building-types/rv-boat-storage",
     "image": "https://heritagesteelbuilds.com/images/ex3.webp"
   }

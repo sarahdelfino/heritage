@@ -51,11 +51,6 @@ export class SeoService {
     this.updatePropertyTag('og:url', canonicalUrl);
     this.updatePropertyTag('og:image', imageUrl);
 
-    this.updateNameTag('twitter:card', 'summary_large_image');
-    this.updateNameTag('twitter:title', config.title);
-    this.updateNameTag('twitter:description', config.description);
-    this.updateNameTag('twitter:image', imageUrl);
-
     this.updateCanonicalUrl(canonicalUrl);
   }
 

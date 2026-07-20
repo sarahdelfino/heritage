@@ -11,7 +11,7 @@ import { Carousel } from '../carousel/carousel';
 
 @Component({
   selector: 'app-home',
-  imports: [Contact, MatCardModule, Carousel, Process],
+  imports: [Contact, MatCardModule, Carousel, Process, RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

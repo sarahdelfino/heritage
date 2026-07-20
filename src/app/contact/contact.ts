@@ -216,34 +216,43 @@ private collectInvalidFieldLabels(control: AbstractControl, path = ''): string[]
 
 async submit(form: FormGroup): Promise<void> {
   this.submitAttempted = true;
+  this.errorText = '';
 
   if (form.invalid) {
-    logEvent(analytics, 'contact_form_error', { fields: this.invalidFieldLabels.join(', ') });
-    this.intakeForm.markAllAsTouched();
+    logEvent(analytics, 'contact_form_error', {
+      fields: this.invalidFieldLabels.join(', '),
+    });
+
+    form.markAllAsTouched();
     return;
   }
-  this.showSuccess = true;
-  logEvent(analytics, 'quote_form_submitted');
 
-  const payload = this.intakeForm.getRawValue();
-  await this.contactService.submit(payload).then(() => {
+  const payload = form.getRawValue();
+
+  try {
+    await this.contactService.submit(payload);
+
     console.log('Submission successful');
+
+    logEvent(analytics, 'quote_form_submitted');
+
+    this.googleAdsService.trackQuoteRequestConversion();
+
     this.showSuccess = true;
-  }).catch((error) => {
+    form.reset();
+    this.submitAttempted = false;
+
+    setTimeout(() => {
+      this.showSuccess = false;
+    }, 3000);
+  } catch (error) {
     console.error('Submission error:', error);
-    this.errorText = 'An error occurred while submitting. Please try again later.';
-  });
-      this.googleAdsService.trackConversion(
-      'AW-123456789/AbCdEfGhIjKlMnOp'
-    );
 
-  this.intakeForm.reset(); 
-  this.submitAttempted = false;
+    this.errorText =
+      'An error occurred while submitting. Please try again later.';
 
-  // auto-hide after 3 seconds
-  setTimeout(() => {
     this.showSuccess = false;
-  }, 3000);
+  }
 }
 
 }

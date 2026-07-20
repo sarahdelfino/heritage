@@ -4,7 +4,7 @@ export const routes: Routes = [
   {
     path: '',
     data: {
-      seo: 'home'
+      seo: 'home',
     },
     loadComponent: () =>
       import('./home/home').then((m) => m.Home),
@@ -12,7 +12,7 @@ export const routes: Routes = [
   {
     path: 'about',
     data: {
-      seo: 'about'
+      seo: 'about',
     },
     loadComponent: () =>
       import('./about-page/about-page').then((m) => m.AboutPage),
@@ -20,7 +20,7 @@ export const routes: Routes = [
   {
     path: 'contact',
     data: {
-      seo: 'contact'
+      seo: 'contact',
     },
     loadComponent: () =>
       import('./contact-page/contact-page').then((m) => m.ContactPage),
@@ -28,7 +28,7 @@ export const routes: Routes = [
   {
     path: 'resources',
     data: {
-      seo: 'resources'
+      seo: 'resources',
     },
     loadComponent: () =>
       import('./resources-page/resources-page').then((m) => m.ResourcesPage),
@@ -36,7 +36,7 @@ export const routes: Routes = [
   {
     path: 'why-heritage',
     data: {
-      seo: 'why-heritage'
+      seo: 'why-heritage',
     },
     loadComponent: () =>
       import('./why-heritage-page/why-heritage-page').then(
@@ -46,7 +46,7 @@ export const routes: Routes = [
   {
     path: 'building-types',
     data: {
-      seo: 'building-types'
+      seo: 'building-types',
     },
     loadComponent: () =>
       import('./building-type-landing/building-type-landing').then(
@@ -58,6 +58,16 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./building-type-page/building-type-page').then(
         (m) => m.BuildingTypePage
+      ),
+  },
+  {
+    path: 'design-your-building',
+    data: {
+      seo: 'design-your-building',
+    },
+    loadComponent: () =>
+      import('./designer-page/designer-page').then(
+        (m) => m.DesignerPage
       ),
   },
 ];
