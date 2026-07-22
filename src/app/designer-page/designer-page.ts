@@ -6,7 +6,6 @@ import { logEvent } from 'firebase/analytics';
 @Component({
   selector: 'app-designer-page',
   standalone: true,
-  imports: [RouterLink],
   templateUrl: './designer-page.html',
   styleUrl: './designer-page.scss',
 })

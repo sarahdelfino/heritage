@@ -10,7 +10,7 @@
   </button>
 
   <ul class="nav-links" [class.open]="menuOpen">
-    @for (link of navLinks; track link.id) {
+    @for (link of navLinks; track $index) {
       <li class="nav-item" [class.has-subnav]="link.subtitles">
         <a [href]="link.link" class="nav-link">
           {{ link.title }}
@@ -25,7 +25,7 @@
         @if (link.subtitles) {
           <div class="sub-nav">
             <ul class="sub-nav-links">
-              @for (subLink of link.subtitles; track subLink.id) {
+              @for (subLink of link.subtitles; track $index) {
                 <li>
                   <a [href]="subLink.link" class="sub-nav-item">
                     {{ subLink.title }}

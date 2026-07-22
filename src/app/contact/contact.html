@@ -1,158 +1,457 @@
 <div class="contact-container">
-    <form id="intakeForm" [formGroup]="intakeForm">
-        <mat-stepper [orientation]="orientation()">
-            <mat-step formGroupName="project" [stepControl]="intakeForm.get(['project'])!">
-                <ng-template matStepLabel>Project Information</ng-template>
-                <div class="step">
-                    <input type="hidden" id="submitDate" name="submitDate" formControlName="submitDate" />
-                    <mat-radio-group aria-label="Select a build type" formControlName="buildType">
-                        <mat-label>What type of project are you looking for?</mat-label>
-                        <mat-radio-button value="commercial">Commercial</mat-radio-button>
-                        <mat-radio-button value="residential">Residential</mat-radio-button>
-                    </mat-radio-group>
-                    @if (intakeForm.get('buildType')?.valid && !intakeForm.get('buildType')?.invalid &&
-                    intakeForm.get('buildType')!.value === 'commercial') {
-                    <mat-radio-group aria-label="Select your role in the project" formControlName="role">
-                        <mat-label>What is your role in the commercial project?</mat-label>
-                        <mat-radio-button value="busOwner">Business Owner</mat-radio-button>
-                        <mat-radio-button value="genContractor">General Contractor</mat-radio-button>
-                        <mat-radio-button value="architect">Architect</mat-radio-button>
-                    </mat-radio-group>
-                    }
-                    <mat-radio-group aria-label="Do you have drawings of your building?" formControlName="drawings">
-                        <mat-label>Do you have drawings of your building?</mat-label>
-                        <mat-radio-button value="arch">Architectural drawings</mat-radio-button>
-                        <mat-radio-button value="sketches">Rough sketches</mat-radio-button>
-                        <mat-radio-button value="3d">3D Model</mat-radio-button>
-                        <mat-radio-button value="none">None</mat-radio-button>
-                    </mat-radio-group>
-                    <mat-form-field>
-                        <mat-label>What stage is your project in?</mat-label>
-                        <mat-select formControlName="projectStage">
-                            <mat-option value="budgetary">Budgetary Stage</mat-option>
-                            <mat-option value="dbPhase">Design/Build Stage</mat-option>
-                            <mat-option value="quote">Plans Designed - Quote Stage</mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                    <button matButton matStepperNext type="button">Next</button>
-                </div>
-            </mat-step>
-            <mat-step formGroupName="building" [stepControl]="intakeForm.get(['building'])!">
-                <ng-template matStepLabel>Building Information</ng-template>
-                <div class="step">
-                    <mat-form-field>
-                        <mat-label>Building Width</mat-label>
-                        <input matInput required formControlName="buildingWidth" type="number" />
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>Building Length</mat-label>
-                        <input matInput required formControlName="buildingLength" type="number" />
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>Wall Height</mat-label>
-                        <input matInput required formControlName="wallHeight" type="number" />
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>City</mat-label>
-                        <input matInput required formControlName="buildingCity" />
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>State</mat-label>
-                        <input matInput required formControlName="buildingState" />
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>Zipcode</mat-label>
-                        <input matInput required formControlName="buildingZip" type="number" />
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>Roof Pitch</mat-label>
-                        <mat-select formControlName="roofPitch">
-                            @for (pitch of roofPitches; track $index) {
-                            <mat-option [value]="pitch.value">{{ pitch.value }}</mat-option>
-                            }
-                        </mat-select>
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>Budget</mat-label>
-                        <mat-select formControlName="budget">
-                            @for (budget of budgets; track $index) {
-                            <mat-option [value]="budget.value">{{ budget.value }}</mat-option>
-                            }
-                        </mat-select>
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>Timeline</mat-label>
-                        <mat-select formControlName="timeline">
-                            @for (timeline of timelines; track $index) {
-                            <mat-option [value]="timeline.value">{{ timeline.value }}</mat-option>
-                            }
-                        </mat-select>
-                    </mat-form-field>
-                    <button class="outline" matButton matStepperPrevious type="button">Back</button>
-                    <button matButton matStepperNext type="button">Next</button>
-                </div>
-            </mat-step>
-            <mat-step formGroupName="personal" [stepControl]="intakeForm.get(['personal'])!">
-                <ng-template matStepLabel>Personal Information</ng-template>
-                <div class="step">
-                    <mat-form-field>
-                        <mat-label>First Name</mat-label>
-                        <input matInput required formControlName="firstName" />
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>Last Name</mat-label>
-                        <input matInput required formControlName="lastName" />
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>Email</mat-label>
-                        <input matInput required formControlName="email" type="email" />
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>Phone</mat-label>
-                        <input matInput required formControlName="phone" type="number" />
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>What industry is your project for?</mat-label>
-                        <mat-select formControlName="industry">
-                            @for (industry of industries; track $index) {
-                            <mat-option [value]="industry.value">{{ industry.value }}</mat-option>
-                            }
-                        </mat-select>
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>Where did you hear about us?</mat-label>
-                        <mat-select formControlName="feedback">
-                            @for (choice of feedback; track $index) {
-                            <mat-option [value]="choice.value">{{ choice.value }}</mat-option>
-                            }
-                        </mat-select>
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>Additional Information</mat-label>
-                        <textarea matInput formControlName="notes"></textarea>
-                    </mat-form-field>
+<form
+  id="intakeForm"
+  [formGroup]="intakeForm"
+  (ngSubmit)="submit(intakeForm)"
+  (focusin)="trackFormStarted()"
+>
+    <mat-stepper
+  [orientation]="orientation()"
+  linear
+  (selectionChange)="onStepChange($event)"
+>
 
-                    @if (submitAttempted && intakeForm.invalid) {
-                    <div class="submit-error-summary" role="alert" aria-live="polite">
-                        <p>Please correct the following fields before submitting:</p>
-                        <ul>
-                            @for (field of invalidFieldLabels; track field) {
-                            <li>{{ field }}</li>
-                            }
-                        </ul>
-                    </div>
-                    }
-                    <button class="outline" matButton matStepperPrevious type="button">Back</button>
-                    <button (click)="submit(intakeForm)" class="primary hello" matButton type="button">
-                        Submit
-                    </button>
-                                        @if (showSuccess) {
-                    <div class="submit-success" role="status" aria-live="polite">
-                        Thank you for reaching out. We’ll be in touch soon.
-                    </div>
-                    }
-                </div>
-            </mat-step>
-        </mat-stepper>
-    </form>
+      <!-- STEP 1: CONTACT -->
+      <mat-step
+        formGroupName="personal"
+        [stepControl]="intakeForm.get('personal')!"
+      >
+        <ng-template matStepLabel>Contact Information</ng-template>
+
+        <div class="step">
+          <div class="step-heading">
+            <p class="eyebrow">Let’s get started</p>
+            <h2>How can we reach you?</h2>
+            <p>
+              Tell us who you are and where your building project will be located.
+            </p>
+          </div>
+
+          <div class="form-grid form-grid--two">
+            <mat-form-field>
+              <mat-label>First Name</mat-label>
+              <input
+                matInput
+                required
+                autocomplete="given-name"
+                formControlName="firstName"
+              />
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Last Name</mat-label>
+              <input
+                matInput
+                required
+                autocomplete="family-name"
+                formControlName="lastName"
+              />
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Email</mat-label>
+              <input
+                matInput
+                required
+                autocomplete="email"
+                formControlName="email"
+                type="email"
+              />
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Phone</mat-label>
+              <input
+                matInput
+                required
+                autocomplete="tel"
+                inputmode="tel"
+                formControlName="phone"
+                type="tel"
+              />
+            </mat-form-field>
+          </div>
+
+          <div formGroupName="buildingLocation" class="form-grid form-grid--location">
+            <mat-form-field>
+              <mat-label>Project City</mat-label>
+              <input
+                matInput
+                required
+                autocomplete="address-level2"
+                formControlName="city"
+              />
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>State</mat-label>
+              <input
+                matInput
+                required
+                autocomplete="address-level1"
+                formControlName="state"
+              />
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>ZIP Code</mat-label>
+              <input
+                matInput
+                required
+                autocomplete="postal-code"
+                inputmode="numeric"
+                formControlName="zip"
+              />
+            </mat-form-field>
+          </div>
+
+          <div class="step-actions step-actions--end">
+<button
+  matButton
+  matStepperNext
+  type="button"
+  (click)="trackStepCompleted(1)"
+>
+  Continue
+</button>
+          </div>
+        </div>
+      </mat-step>
+
+      <!-- STEP 2: PROJECT OVERVIEW -->
+      <mat-step
+        formGroupName="project"
+        [stepControl]="intakeForm.get('project')!"
+      >
+        <ng-template matStepLabel>Project Overview</ng-template>
+
+        <div class="step">
+          <div class="step-heading">
+            <p class="eyebrow">Your project</p>
+            <h2>What are you planning to build?</h2>
+            <p>
+              A general idea is enough. You do not need finalized plans to get
+              started.
+            </p>
+          </div>
+
+          <input
+            type="hidden"
+            formControlName="submitDate"
+          />
+
+          <mat-radio-group
+            class="radio-section"
+            aria-label="Select a project type"
+            formControlName="buildType"
+          >
+            <mat-label>What type of project are you looking for?</mat-label>
+
+            <mat-radio-button value="commercial">
+              Commercial
+            </mat-radio-button>
+
+            <mat-radio-button value="residential">
+              Residential
+            </mat-radio-button>
+          </mat-radio-group>
+
+          @if (intakeForm.get('project.buildType')?.value === 'commercial') {
+            <mat-radio-group
+              class="radio-section"
+              aria-label="Select your role in the project"
+              formControlName="role"
+            >
+              <mat-label>What is your role in the project?</mat-label>
+
+              <mat-radio-button value="business-owner">
+                Business Owner
+              </mat-radio-button>
+
+              <mat-radio-button value="general-contractor">
+                General Contractor
+              </mat-radio-button>
+
+              <mat-radio-button value="architect">
+                Architect
+              </mat-radio-button>
+
+              <mat-radio-button value="other">
+                Other
+              </mat-radio-button>
+            </mat-radio-group>
+          }
+
+          <mat-form-field>
+            <mat-label>What industry or use is this building for?</mat-label>
+
+            <mat-select formControlName="industry">
+              @for (industry of industries; track $index) {
+                <mat-option [value]="industry.value">
+                  {{ industry.value }}
+                </mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="full-width">
+            <mat-label>Tell us about your project</mat-label>
+
+            <textarea
+              matInput
+              required
+              rows="5"
+              formControlName="projectDescription"
+              placeholder="For example: I am planning a 60 × 80 aircraft hangar near Charleston and would like help with design, engineering, and installation."
+            ></textarea>
+
+            <mat-hint>
+              Include the intended use, approximate size, or anything else you
+              already know.
+            </mat-hint>
+          </mat-form-field>
+
+          <div class="step-actions">
+            <button
+              class="outline"
+              matButton
+              matStepperPrevious
+              type="button"
+            >
+              Back
+            </button>
+
+<button
+  matButton
+  matStepperNext
+  type="button"
+  (click)="trackStepCompleted(2)"
+>
+  Continue
+</button>
+          </div>
+        </div>
+      </mat-step>
+
+      <!-- STEP 3: OPTIONAL DETAILS -->
+      <mat-step formGroupName="building">
+        <ng-template matStepLabel>Project Details</ng-template>
+
+        <div class="step">
+          <div class="step-heading">
+            <p class="eyebrow">Optional details</p>
+            <h2>Share anything else you already know.</h2>
+            <p>
+              These details help us prepare for the conversation, but estimates
+              are completely fine.
+            </p>
+          </div>
+
+          <div class="optional-notice">
+            You can leave any of these fields blank if your plans are still
+            developing.
+          </div>
+
+          <div class="form-grid form-grid--three">
+            <mat-form-field>
+              <mat-label>Approximate Width</mat-label>
+              <input
+                matInput
+                formControlName="buildingWidth"
+                placeholder="e.g. 60'"
+              />
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Approximate Length</mat-label>
+              <input
+                matInput
+                formControlName="buildingLength"
+                placeholder="e.g. 80'"
+              />
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Approximate Wall Height</mat-label>
+              <input
+                matInput
+                formControlName="wallHeight"
+                placeholder="e.g. 16'"
+              />
+            </mat-form-field>
+          </div>
+
+          <div class="form-grid form-grid--two">
+            <mat-form-field>
+              <mat-label>Project Stage</mat-label>
+
+              <mat-select formControlName="projectStage">
+                <mat-option value="researching">
+                  Researching options
+                </mat-option>
+
+                <mat-option value="budgetary">
+                  Budget planning
+                </mat-option>
+
+                <mat-option value="design-build">
+                  Design/build stage
+                </mat-option>
+
+                <mat-option value="quote">
+                  Plans completed — ready for a quote
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Drawings</mat-label>
+
+              <mat-select formControlName="drawings">
+                <mat-option value="architectural">
+                  Architectural drawings
+                </mat-option>
+
+                <mat-option value="sketches">
+                  Rough sketches
+                </mat-option>
+
+                <mat-option value="3d-model">
+                  3D model
+                </mat-option>
+
+                <mat-option value="none">
+                  No drawings yet
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Roof Pitch</mat-label>
+
+              <mat-select formControlName="roofPitch">
+                @for (pitch of roofPitches; track $index) {
+                  <mat-option [value]="pitch.value">
+                    {{ pitch.value }}
+                  </mat-option>
+                }
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Estimated Budget</mat-label>
+
+              <mat-select formControlName="budget">
+                @for (budget of budgets; track $index) {
+                  <mat-option [value]="budget.value">
+                    {{ budget.value }}
+                  </mat-option>
+                }
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Preferred Timeline</mat-label>
+
+              <mat-select formControlName="timeline">
+                @for (timeline of timelines; track $index) {
+                  <mat-option [value]="timeline.value">
+                    {{ timeline.value }}
+                  </mat-option>
+                }
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Where did you hear about us?</mat-label>
+
+              <mat-select formControlName="feedback">
+                @for (choice of feedback; track $index) {
+                  <mat-option [value]="choice.value">
+                    {{ choice.value }}
+                  </mat-option>
+                }
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <mat-form-field class="full-width">
+            <mat-label>Additional Information</mat-label>
+
+            <textarea
+              matInput
+              rows="4"
+              formControlName="notes"
+              placeholder="Share any special requirements, questions, or other helpful details."
+            ></textarea>
+          </mat-form-field>
+
+          <div class="submission-expectations">
+            <h3>What happens next?</h3>
+
+            <p>
+              Our team will review your project and contact you to discuss your
+              goals, answer questions, and determine the appropriate next step.
+            </p>
+          </div>
+
+          @if (submitAttempted && intakeForm.invalid) {
+            <div
+              class="submit-error-summary"
+              role="alert"
+              aria-live="polite"
+            >
+              <p>Please correct the following fields before submitting:</p>
+
+              <ul>
+                @for (field of invalidFieldLabels; track $index) {
+                  <li>{{ field }}</li>
+                }
+              </ul>
+            </div>
+          }
+
+          @if (errorText) {
+            <div
+              class="submit-error-summary"
+              role="alert"
+              aria-live="assertive"
+            >
+              {{ errorText }}
+            </div>
+          }
+
+          <div class="step-actions">
+            <button
+              class="outline"
+              matButton
+              matStepperPrevious
+              type="button"
+            >
+              Back
+            </button>
+
+            <button
+              class="primary hello"
+              matButton
+              type="submit"
+            >
+              Request a Quote
+            </button>
+          </div>
+
+          @if (showSuccess) {
+            <div
+              class="submit-success"
+              role="status"
+              aria-live="polite"
+            >
+              Thank you for reaching out. We’ll be in touch soon.
+            </div>
+          }
+        </div>
+      </mat-step>
+
+    </mat-stepper>
+  </form>
 </div>

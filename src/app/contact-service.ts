@@ -6,31 +6,36 @@ export interface HeritageIntakeFormValue {
   project: {
     submitDate: number;
     buildType: string;
-    role: string;
-    buildStage: string;
-    projectStage: string;
-    drawings: string;
+
+    role?: string;
+    buildStage?: string;
+    projectStage?: string;
+    drawings?: string;
   };
+
   building: {
-    buildingWidth: string | number;
-    buildingLength: string | number;
-    wallHeight: string | number;
-    roofPitch: string;
-    budget: string;
-    timeline: string;
-    assistance: string;
     buildingCity: string;
     buildingState: string;
     buildingZip: string;
+
+    buildingWidth?: string | number;
+    buildingLength?: string | number;
+    wallHeight?: string | number;
+    roofPitch?: string;
+    budget?: string;
+    timeline?: string;
+    assistance?: string;
   };
+
   personal: {
     firstName: string;
     lastName: string;
     email: string;
     phone: string;
     industry: string;
-    feedback: string;
-    notes: string;
+
+    feedback?: string;
+    notes?: string;
   };
 }
 
@@ -46,16 +51,25 @@ export interface SubmitHeritageIntakeResponse {
   firestoreId: string | null;
 }
 
-@Injectable({ providedIn: 'root' })
+@Injectable({
+  providedIn: 'root',
+})
 export class ContactService {
-  async submit(formValue: unknown): Promise<void> {
-    console.log(formValue);
-    const callable = httpsCallable(functions, 'submitHeritageIntake');
+  async submit(
+    formValue: HeritageIntakeFormValue,
+  ): Promise<SubmitHeritageIntakeResponse> {
+    const callable = httpsCallable<
+      SubmitHeritageIntakeRequest,
+      SubmitHeritageIntakeResponse
+    >(functions, 'submitHeritageIntake');
 
-    await callable({
+    const result = await callable({
       form: formValue,
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+      timezone:
+        Intl.DateTimeFormat().resolvedOptions().timeZone,
       saveToFirestore: true,
     });
+
+    return result.data;
   }
 }

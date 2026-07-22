@@ -1,100 +1,365 @@
 @use '@angular/material' as mat;
 
+:host {
+  display: block;
+  padding: clamp(2rem, 5vw, 5rem) 1rem;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(201, 161, 74, 0.1),
+      transparent 28rem
+    ),
+    #fbfaf7;
+  color: #191716;
+}
+
 :host ::ng-deep .mat-mdc-form-field-focus-overlay {
   background-color: transparent !important;
 }
 
 .contact-container {
-    max-width: fit-content;
-    margin: auto;
-    border: 1px solid #500909;
-    border-radius: 4px;
-    padding: 2rem;
+  width: min(100%, 960px);
+  margin: 0 auto;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+
+  border: 1px solid rgba(80, 9, 9, 0.18);
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  box-shadow:
+    0 1px 2px rgba(29, 20, 17, 0.04),
+    0 18px 50px rgba(29, 20, 17, 0.08);
+}
+
+#intakeForm {
+  width: 100%;
 }
 
 mat-stepper {
+  width: 100%;
+  max-width: none;
+  background: transparent;
+
   @include mat.stepper-overrides((
     header-icon-background-color: #500909,
-    header-selected-state-icon-background-color: #c9a14a
+    header-selected-state-icon-background-color: #c9a14a,
+    header-selected-state-label-text-color: #500909,
+    header-label-text-color: #625b57
   ));
-  background-color: transparent;
 }
 
 mat-radio-group {
-      @include mat.radio-overrides((
+  @include mat.radio-overrides((
     checked-ripple-color: #500909,
     ripple-color: #500909,
     selected-icon-color: #500909,
     selected-pressed-icon-color: #500909,
     selected-focus-icon-color: #500909,
     selected-hover-icon-color: #c9a14a
-    
   ));
 }
 
-#intakeForm {
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+:host ::ng-deep .mat-horizontal-content-container {
+  padding: 2rem 0 0;
 }
 
-mat-stepper {
-    max-width: 700px;
+:host ::ng-deep .mat-vertical-content {
+  padding-top: 1.25rem;
 }
 
-mat-radio-group {
-    display: flex;
-    flex-direction: column;
+:host ::ng-deep .mat-step-header {
+  border-radius: 10px;
 }
 
-.step-flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+:host ::ng-deep .mat-step-header:hover {
+  background: rgba(80, 9, 9, 0.04);
 }
 
-mat-form-field, mat-radio-group {
-    margin: 10px;
+:host ::ng-deep .mat-step-label {
+  font-weight: 600;
 }
 
 .step {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-    margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
 }
 
-button {
-    margin-bottom: 10px;
+.step-heading {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(25, 23, 22, 0.1);
 }
+
+.step-heading .eyebrow {
+  margin: 0 0 0.45rem;
+
+  color: #7a5b1e;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.step-heading h2 {
+  margin: 0;
+
+  color: #500909;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 650;
+  line-height: 1.18;
+}
+
+.step-heading p:not(.eyebrow) {
+  max-width: 640px;
+  margin: 0.75rem 0 0;
+
+  color: #655e5a;
+
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.form-grid {
+  display: grid;
+  gap: 0 1rem;
+  width: 100%;
+}
+
+.form-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.form-grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.form-grid--location {
+  grid-template-columns: minmax(0, 2fr) minmax(110px, 0.8fr) minmax(130px, 1fr);
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+:host ::ng-deep .mat-mdc-text-field-wrapper {
+  border-radius: 8px;
+}
+
+:host ::ng-deep .mat-mdc-form-field-subscript-wrapper {
+  min-height: 1.15rem;
+}
+
+.radio-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+
+  padding: 1.1rem 1.2rem;
+
+  border: 1px solid rgba(80, 9, 9, 0.12);
+  border-radius: 10px;
+
+  background: #fdfbf7;
+}
+
+.radio-section mat-label,
+mat-radio-group > mat-label {
+  display: block;
+  margin-bottom: 0.5rem;
+
+  color: #342f2c;
+
+  font-size: 0.95rem;
+  font-weight: 650;
+}
+
+mat-radio-button {
+  width: fit-content;
+}
+
+.optional-notice {
+  padding: 0.9rem 1rem;
+
+  border-left: 4px solid #c9a14a;
+  border-radius: 0 8px 8px 0;
+
+  background: rgba(201, 161, 74, 0.1);
+  color: #594719;
+
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.submission-expectations {
+  padding: 1.25rem 1.4rem;
+
+  border: 1px solid rgba(80, 9, 9, 0.12);
+  border-radius: 10px;
+
+  background: #f8f4ef;
+}
+
+.submission-expectations h3 {
+  margin: 0 0 0.45rem;
+
+  color: #500909;
+
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.submission-expectations p {
+  margin: 0;
+
+  color: #625b57;
+
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.step-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+
+  padding-top: 0.5rem;
+}
+
+.step-actions--end {
+  justify-content: flex-end;
+}
+
+.step-actions button {
+  min-width: 120px;
+  min-height: 44px;
+  margin: 0;
+  padding-inline: 1.35rem;
+
+  border-radius: 6px;
+
+  font-weight: 650;
+}
+
+.step-actions button:not(.outline) {
+  background: #500909;
+  color: #fff;
+}
+
+.step-actions button:not(.outline):hover {
+  background: #6a1010;
+}
+
+.step-actions .outline {
+  border: 1px solid rgba(80, 9, 9, 0.4);
+  background: transparent;
+  color: #500909;
+}
+
+.step-actions .outline:hover {
+  background: rgba(80, 9, 9, 0.05);
+}
+
+.step-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.submit-error-summary,
+.submit-success {
+  padding: 0.95rem 1rem;
+
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
 .submit-error-summary {
-  margin: 0 10px 12px 0px;
-  padding: 12px 14px;
-  border: 1px solid #b3261e;
-  border-radius: 4px;
+  border: 1px solid rgba(179, 38, 30, 0.35);
   background: #fdf2f2;
-  color: #b3261e;
+  color: #9f211a;
 }
 
 .submit-error-summary p {
-  margin: 0 0 8px;
-  font-weight: 600;
+  margin: 0 0 0.5rem;
+  font-weight: 650;
 }
 
 .submit-error-summary ul {
   margin: 0;
-  padding-left: 18px;
+  padding-left: 1.25rem;
 }
 
 .submit-success {
-  margin: 0 10px 12px 0px;
-  padding: 12px 14px;
-  border: 1px solid #2e7d32;
-  border-radius: 4px;
+  border: 1px solid rgba(46, 125, 50, 0.35);
   background: #edf7ed;
-  color: #2e7d32;
-  font-weight: 500;
+  color: #276b2b;
+  font-weight: 600;
+}
+
+@media (max-width: 800px) {
+  :host {
+    padding: 1.5rem 0.75rem 3rem;
+  }
+
+  .contact-container {
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+
+  .form-grid--two,
+  .form-grid--three,
+  .form-grid--location {
+    grid-template-columns: 1fr;
+  }
+
+  :host ::ng-deep .mat-vertical-content-container {
+    margin-left: 18px;
+  }
+}
+
+@media (max-width: 540px) {
+  .contact-container {
+    padding: 1rem;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+  }
+
+  .step {
+    gap: 1rem;
+  }
+
+  .step-heading {
+    padding-bottom: 1rem;
+  }
+
+  .step-actions {
+    align-items: stretch;
+    flex-direction: column-reverse;
+  }
+
+  .step-actions--end {
+    flex-direction: column;
+  }
+
+  .step-actions button {
+    width: 100%;
+  }
+
+  .radio-section {
+    padding: 1rem;
+  }
 }
